@@ -21,13 +21,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
- * \brief  
- * 
+ * \brief
+ *
  * \author joechamm
  * \date   September 2022
  *********************************************************************/
-#ifndef __MESH_INDIRECT_H__
-#define __MESH_INDIRECT_H__
+#ifndef __MESH_H__
+#define __MESH_H__
 
 #include <q20functional.h>
 
@@ -63,12 +63,24 @@ namespace jcqt
 
 	private:
 		GLuint m_bufferIndirect = 0;
-	
+
 	public:
-		QList<DrawElementsIndirectCommand> m_drawCommands;	
+		QList<DrawElementsIndirectCommand> m_drawCommands;
 	};
 
-	
+	class JCQTOPENGL_EXPORT DrawMesh final
+	{
+		GLuint m_vao = 0;
+		GLuint m_indexBuffer;
+		GLuint m_vertexBuffer;
+		GLuint m_materialsBuffer;
+		GLuint m_modelMatricesBuffer;
+		quint32 m_numIndices;
+		IndirectBuffer m_indirectBuffer;
+
+	public:
+		
+	};
 
 	template <typename SceneDataType>
 	class JCQTOPENGL_EXPORT MeshIndirect final
@@ -93,7 +105,7 @@ namespace jcqt
 		QList<GLuint> m_vertexBufferBindings;
 		QList<GLuint> m_shaderStorageBufferBindings;
 	};
-	
+
 }
 
 #endif // !__MESH_H__

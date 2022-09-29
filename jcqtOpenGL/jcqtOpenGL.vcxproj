@@ -97,9 +97,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
     <ClInclude Include="jcqtopengl_global.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="MeshIndirect.h" />
+    <ClInclude Include="VtxData.h" />
     <QtMoc Include="jcqtOpenGL.h" />
     <ClCompile Include="jcqtOpenGL.cpp" />
   </ItemGroup>
