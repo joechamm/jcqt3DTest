@@ -35,6 +35,7 @@ SOFTWARE.
 #include <QList>
 
 #include "jcqtopengl_global.h"
+#include "SceneData.h"
 
 namespace jcqt
 {
@@ -75,14 +76,20 @@ namespace jcqt
 		GLuint m_vertexBuffer;
 		GLuint m_materialsBuffer;
 		GLuint m_modelMatricesBuffer;
+		GLuint m_indirectBuffer;
 		quint32 m_numIndices;
-		IndirectBuffer m_indirectBuffer;
+	//	IndirectBuffer m_indirectBuffer;
 
 	public:
-		
+		explicit DrawMesh ( const SceneData& data );
+		~DrawMesh ();
+		DrawMesh ( const DrawMesh& ) = delete;
+		DrawMesh ( DrawMesh&& ) = default;
+
+		void draw ( const SceneData& data ) const;		
 	};
 
-	template <typename SceneDataType>
+	/*template <typename SceneDataType>
 	class JCQTOPENGL_EXPORT MeshIndirect final
 	{
 	public:
@@ -104,7 +111,7 @@ namespace jcqt
 		QList<GLuint> m_shaderStorageBuffers;
 		QList<GLuint> m_vertexBufferBindings;
 		QList<GLuint> m_shaderStorageBufferBindings;
-	};
+	};*/
 
 }
 

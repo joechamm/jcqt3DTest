@@ -60,12 +60,12 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -97,11 +97,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="DrawMesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneData.cpp" />
+    <ClCompile Include="VtxData.cpp" />
     <ClInclude Include="jcqtopengl_global.h" />
-    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="DrawMesh.h" />
     <ClInclude Include="MeshIndirect.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneData.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="UtilsMath.h" />
     <ClInclude Include="VtxData.h" />
     <QtMoc Include="jcqtOpenGL.h" />
     <ClCompile Include="jcqtOpenGL.cpp" />
