@@ -4,6 +4,8 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
+#include "jcqtopengl_ext_functions.h"
+
 namespace jcqt
 {
 	using glm::vec2;
@@ -16,9 +18,13 @@ namespace jcqt
 		, m_materialsBuffer ( 0 )
 		, m_modelMatricesBuffer ( 0 )
 		, m_indirectBuffer ( 0 )
-		//		, m_indirectBuffer ( sizeof ( DrawElementsIndirectCommand )* data.shapes_.size () + sizeof ( GLsizei ) )
 	{
 		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
+
+		if ( !g_extFunctionsIsInitialized )
+		{
+			initExtFunctions ( ctx );
+		}
 
 		auto funcs = QOpenGLVersionFunctionsFactory::get<QOpenGLFunctions_4_5_Core> ( ctx );
 
@@ -36,22 +42,23 @@ namespace jcqt
 
 		funcs->glCreateVertexArrays ( 1, &m_vao );
 		funcs->glVertexArrayElementBuffer ( m_vao, m_indexBuffer );
-		funcs->glVertexArrayVertexBuffer ( m_vao, 0, m_vertexBuffer, 0, sizeof ( vec3 ) + sizeof ( vec3 ) + sizeof ( vec2 ) );
+		funcs->glVertexArrayVertexBuffer ( m_vao, kIdxBind_TightBufferVtx, m_vertexBuffer, 0, sizeof ( vec3 ) + sizeof ( vec3 ) + sizeof ( vec2 ) );
 
 		// position
-		funcs->glEnableVertexArrayAttrib ( m_vao, 0 );
-		funcs->glVertexArrayAttribFormat ( m_vao, 0, 3, GL_FLOAT, GL_FALSE, 0 );
-		funcs->glVertexArrayAttribBinding ( m_vao, 0, 0 );
+		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_POSITION );
+		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_POSITION, 3, GL_FLOAT, GL_FALSE, 0 );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_POSITION, kIdxBind_TightBufferVtx );
 
 		// uv 
-		funcs->glEnableVertexArrayAttrib ( m_vao, 1 );
-		funcs->glVertexArrayAttribFormat ( m_vao, 1, 2, GL_FLOAT, GL_FALSE, sizeof ( vec3 ) );
-		funcs->glVertexArrayAttribBinding ( m_vao, 1, 0 );
+		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_TEXCOORD_0 );
+		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_TEXCOORD_0, 2, GL_FLOAT, GL_FALSE, sizeof(vec3) );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_TEXCOORD_0, kIdxBind_TightBufferVtx );
 
+	
 		// normal
-		funcs->glEnableVertexArrayAttrib ( m_vao, 2 );
-		funcs->glVertexArrayAttribFormat ( m_vao, 2, 3, GL_TRUE, GL_FALSE, sizeof ( vec3 ) + sizeof ( vec2 ) );
-		funcs->glVertexArrayAttribBinding ( m_vao, 2, 0 );
+		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_NORMAL );
+		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(vec3) + sizeof(vec2) );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_NORMAL, kIdxBind_TightBufferVtx );
 
 		QByteArray drawCommands;
 
@@ -98,6 +105,7 @@ namespace jcqt
 		funcs->glDeleteBuffers (1, &m_indexBuffer );
 		funcs->glDeleteBuffers ( 1, &m_indirectBuffer );
 		funcs->glDeleteBuffers ( 1, &m_modelMatricesBuffer );
+		funcs->glDeleteBuffers ( 1, &m_materialsBuffer );
 		funcs->glDeleteBuffers ( 1, &m_vertexBuffer );
 	}
 
@@ -108,10 +116,11 @@ namespace jcqt
 		auto funcs = QOpenGLVersionFunctionsFactory::get<QOpenGLFunctions_4_5_Core> ( ctx );
 
 		funcs->glBindVertexArray ( m_vao );
-		funcs->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kIdxBind_Materials, m_materialsBuffer );
-		funcs->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kIdxBind_ModelMatrices, m_modelMatricesBuffer );
+		funcs->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kIdxBind_SSBOMaterials, m_materialsBuffer );
+		funcs->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kIdxBind_SSBOModelMatrices, m_modelMatricesBuffer );
 		funcs->glBindBuffer ( GL_DRAW_INDIRECT_BUFFER, m_indirectBuffer );
-	//	funcs->glBindBuffer ( GL_PARAMETER_BUFFER, m_indirectBuffer );
-		funcs->glMultiDrawElementsIndirect ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, 0 );
+		funcs->glBindBuffer ( GL_PARAMETER_BUFFER, m_indirectBuffer );
+//		funcs->glMultiDrawElementsIndirect ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, 0 );
+		glMultiDrawElementsIndirectCountARB ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, ( GLsizei ) data.shapes_.size (), 0 );
 	}
 }

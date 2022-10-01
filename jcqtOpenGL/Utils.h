@@ -39,7 +39,7 @@ namespace jcqt
 	template <typename T>
 	inline void mergeLists ( QList<T>& l1, const QList<T>& l2 )
 	{
-		l1.insert ( l1.end (), l2.begin (), l2.end () );
+		l1.append ( l2 );
 	}
 
 	inline qint32 addUnique ( QByteArrayList& files, const QByteArray& file )

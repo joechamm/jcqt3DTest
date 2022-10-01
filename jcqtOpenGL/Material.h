@@ -40,7 +40,7 @@ using glm::vec4;
 
 namespace jcqt
 {
-	enum class eMaterialFlags : quint8
+	enum eMaterialFlags
 	{
 		eMaterialFlags_CastShadow = 0x1,
 		eMaterialFlags_ReceiveShadow = 0x2,
@@ -75,7 +75,7 @@ namespace jcqt
 		float alphaTest_ = 0.0f;
 		float metallicFactor_ = 1.0f;
 
-		quint32 flags_ = sMaterialFlags_CastShadow | sMaterialFlags_ReceiveShadow;
+		quint32 flags_ = eMaterialFlags_CastShadow | eMaterialFlags_ReceiveShadow;
 
 		quint64 ambientOcclusionMap_ = INVALID_TEXTURE;
 		quint64 emissiveMap_ = INVALID_TEXTURE;
@@ -85,7 +85,7 @@ namespace jcqt
 		quint64 opacityMap_ = INVALID_TEXTURE;
 	};
 
-	Q_STATIC_ASSERT ( sizeof ( MaterialDescription ) % 16 == 0, "MaterialDescription should be padded to 16 bytes" );
+	static_assert ( sizeof ( MaterialDescription ) % 16 == 0, "MaterialDescription should be padded to 16 bytes" );
 
 	/**
 	 * @brief Save the converted material data to file.

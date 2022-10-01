@@ -36,8 +36,8 @@ SOFTWARE.
 #include "VtxData.h"
 
 #include <QList>
-
-QT_FORWARD_DECLARE_CLASS ( QOpenGLTexture );
+#include <QOpenGLTexture>
+#include <QSharedPointer>
 
 namespace jcqt
 {
@@ -55,7 +55,7 @@ namespace jcqt
 
 		Scene scene_;
 
-		QList<QOpenGLTexture> allMaterialTextures_;
+		QList<QSharedPointer<QOpenGLTexture>> allMaterialTextures_;
 		QList<MaterialDescription> materials_;
 		QList<DrawData> shapes_;
 	};

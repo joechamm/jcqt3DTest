@@ -31,12 +31,12 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>6.3.2_msvc2019_64</QtInstall>
+    <QtInstall>6.4.0_msvc2019_64</QtInstall>
     <QtModules>core;opengl</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>6.3.2_msvc2019_64</QtInstall>
+    <QtInstall>6.4.0_msvc2019_64</QtInstall>
     <QtModules>core;opengl</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -97,12 +97,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="jcqtopengl_ext_functions.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="DrawMesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneData.cpp" />
     <ClCompile Include="VtxData.cpp" />
+    <ClInclude Include="jcqtopengl_ext_functions.h" />
     <ClInclude Include="jcqtopengl_global.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="DrawMesh.h" />
@@ -112,8 +114,10 @@
     <ClInclude Include="Utils.h" />
     <ClInclude Include="UtilsMath.h" />
     <ClInclude Include="VtxData.h" />
-    <QtMoc Include="jcqtOpenGL.h" />
-    <ClCompile Include="jcqtOpenGL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jcqtOpenGL.pri" />
+    <None Include="jcqtOpenGL.pro" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

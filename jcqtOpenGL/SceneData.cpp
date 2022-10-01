@@ -4,19 +4,21 @@
 #include <QOpenGLContext>
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
-#include <qopenglfunctions.h>
 
+#include "jcqtopengl_ext_functions.h"
+
+//#include <qopenglfunctions.h>
 //typedef GLuint64 (__stdcall PFN)
 
 namespace jcqt
 {
-	static uint64_t getTextureHandleBindless ( uint64_t idx, const QList<QOpenGLTexture>& textures )
+	/*static uint64_t getTextureHandleBindless ( uint64_t idx, const QList<QSharedPointer<QOpenGLTexture>>& textures )
 	{
 		if ( idx == INVALID_TEXTURE ) return 0;
 
 		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
 		
-		GLuint handle = textures [ idx ].textureId ();
+		GLuint handle = textures [ idx ]->textureId ();
 
 		if ( !ctx->hasExtension ( "GL_ARB_bindless_texture" ) )
 		{
@@ -29,6 +31,21 @@ namespace jcqt
 		GLuint64 handleBindless = reinterpret_cast< PFNGLGETTEXTUREHANDLEARBPROC >( glGetTextureHandleARB )( handle );
 		reinterpret_cast< PFNGLMAKETEXTUREHANDLERESIDENTARBPROC >( glMakeTextureHandleResidentARB )( handleBindless );
 		return handleBindless;
+	}*/
+
+	static GLuint64 getTextureHandleBindless ( qsizetype idx, const QList<QSharedPointer<QOpenGLTexture>>& textures )
+	{
+		if ( INVALID_TEXTURE == idx ) return 0;
+
+//		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
+
+		GLuint handle = textures [ idx ]->textureId ();
+
+//		initExtFunctsions ( ctx );
+
+		GLuint64 handleBindless = glGetTextureHandleARB ( handle );
+		glMakeTextureHandleResidentARB ( handleBindless );
+		return handleBindless;
 	}
 
 	SceneData::SceneData (
@@ -36,6 +53,11 @@ namespace jcqt
 		const char* sceneFile,
 		const char* materialFile )
 	{
+		if ( !g_extFunctionsIsInitialized )
+		{
+			initExtFunctions ( QOpenGLContext::currentContext () );
+		}
+
 		header_ = loadMeshData ( meshFile, meshData_ );
 		loadScene ( sceneFile );
 
@@ -45,7 +67,8 @@ namespace jcqt
 
 		for ( const auto& f : textureFiles )
 		{
-			allMaterialTextures_.emplace_back ( QOpenGLTexture ( QImage ( f ) ) );
+			QImage image ( f );
+			allMaterialTextures_.emplace_back ( QSharedPointer<QOpenGLTexture>::create ( image ) );
 		}
 
 		for ( auto& mtl : materials_ )

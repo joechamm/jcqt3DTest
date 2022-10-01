@@ -1,4 +1,5 @@
 #include "VtxData.h"
+#include "Utils.h"
 
 #include <QFile>
 #include <QFileInfo>
@@ -100,8 +101,8 @@ namespace jcqt
 		f.read ( ( char* ) &sz, sizeof ( sz ) );
 
 		// TODO: check file size, divide by bounding box size
-		boxes.resize ( ( qsizetype ) sz );
-		fread ( ( char* ) boxes.data (), sz * sizeof ( BoundingBox ) );
+		boxes.resize ( ( qsizetype ) sz );	
+		f.read ( ( char* ) boxes.data (), sz * sizeof ( BoundingBox ) );
 
 		f.close ();
 	}
@@ -115,10 +116,10 @@ namespace jcqt
 		quint32 offs = 0;
 		for ( const MeshData* i : md )
 		{
-			mergeVectors ( m.indexData_, i->indexData_ );
-			mergeVectors ( m.vertexData_, i->vertexData_ );
-			mergeVectors ( m.meshes_, i->meshes_ );
-			mergeVectors ( m.boxes_, i->boxes_ );
+			mergeLists ( m.indexData_, i->indexData_ );
+			mergeLists ( m.vertexData_, i->vertexData_ );
+			mergeLists ( m.meshes_, i->meshes_ );
+			mergeLists ( m.boxes_, i->boxes_ );
 
 			quint32 vtxOffset = totalVertexDataSize / 8; /* 8 is the number of per-vertex attributes: position, normal + UV */
 

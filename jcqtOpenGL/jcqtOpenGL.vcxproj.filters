@@ -26,12 +26,6 @@
     <ClInclude Include="jcqtopengl_global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <QtMoc Include="jcqtOpenGL.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="jcqtOpenGL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClInclude Include="MeshIndirect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -56,6 +50,9 @@
     <ClInclude Include="SceneData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jcqtopengl_ext_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MeshIndirect.cpp">
@@ -76,5 +73,16 @@
     <ClCompile Include="SceneData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jcqtopengl_ext_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jcqtOpenGL.pri">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="jcqtOpenGL.pro">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
