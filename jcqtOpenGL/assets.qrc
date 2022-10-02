@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/textures">
+        <file alias="/textures/const1.bmp">assets/textures/const1.bmp</file>
+    </qresource>
+</RCC>

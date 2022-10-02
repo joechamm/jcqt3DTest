@@ -50,16 +50,10 @@
     <ClInclude Include="SceneData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="jcqtopengl_ext_functions.h">
+    <ClInclude Include="jcqtopengl_arb_extensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qopenglfunctions_4_6_core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="qopenglfunctions_arb_extensions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="qopenglfunctions_nv_extensions.h">
+    <ClInclude Include="SceneDataLazy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -82,16 +76,10 @@
     <ClCompile Include="SceneData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="jcqtopengl_ext_functions.cpp">
+    <ClCompile Include="jcqtopengl_arb_extensions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="qopenglfunctions_4_6_core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="openglfunctions_arb_extensions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qopenglfunctions_nv_extensions.cpp">
+    <ClCompile Include="SceneDataLazy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,5 +90,10 @@
     <None Include="jcqtOpenGL.pro">
       <Filter>Resource Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="assets.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>

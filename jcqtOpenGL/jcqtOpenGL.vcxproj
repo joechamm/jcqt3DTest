@@ -32,12 +32,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;opengl</QtModules>
+    <QtModules>core;gui;concurrent;opengl</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;opengl</QtModules>
+    <QtModules>core;gui;concurrent;opengl</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -61,13 +61,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Qt\6.4.0\msvc2019_64\include\QtGui\6.4.0;C:\Qt\6.4.0\msvc2019_64\include\QtOpenGL\6.4.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Qt\6.4.0\msvc2019_64\include\QtGui\6.4.0;C:\Qt\6.4.0\msvc2019_64\include\QtOpenGL\6.4.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -99,26 +99,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="jcqtopengl_ext_functions.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="DrawMesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
-    <ClCompile Include="openglfunctions_arb_extensions.cpp" />
-    <ClCompile Include="qopenglfunctions_4_6_core.cpp" />
-    <ClCompile Include="qopenglfunctions_nv_extensions.cpp" />
+    <ClCompile Include="jcqtopengl_arb_extensions.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneData.cpp" />
+    <ClCompile Include="SceneDataLazy.cpp" />
     <ClCompile Include="VtxData.cpp" />
-    <ClInclude Include="jcqtopengl_ext_functions.h" />
     <ClInclude Include="jcqtopengl_global.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="DrawMesh.h" />
     <ClInclude Include="MeshIndirect.h" />
-    <ClInclude Include="qopenglfunctions_4_6_core.h" />
-    <ClInclude Include="qopenglfunctions_arb_extensions.h" />
-    <ClInclude Include="qopenglfunctions_nv_extensions.h" />
+    <ClInclude Include="jcqtopengl_arb_extensions.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneData.h" />
+    <ClInclude Include="SceneDataLazy.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="UtilsMath.h" />
     <ClInclude Include="VtxData.h" />
@@ -126,6 +122,9 @@
   <ItemGroup>
     <None Include="jcqtOpenGL.pri" />
     <None Include="jcqtOpenGL.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="assets.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

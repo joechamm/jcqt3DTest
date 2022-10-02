@@ -5,7 +5,7 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
-#include "jcqtopengl_ext_functions.h"
+#include "jcqtopengl_arb_extensions.h"
 
 //#include <qopenglfunctions.h>
 //typedef GLuint64 (__stdcall PFN)
@@ -40,11 +40,12 @@ namespace jcqt
 //		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
 
 		GLuint handle = textures [ idx ]->textureId ();
+		GLuint* handlePtr = &handle;
 
 //		initExtFunctsions ( ctx );
 
-		GLuint64 handleBindless = glGetTextureHandleARB ( handle );
-		glMakeTextureHandleResidentARB ( handleBindless );
+		GLuint64 handleBindless = jcqt::glGetTextureHandleARB ( handle );
+		//glMakeTextureHandleResidentARB ( handleBindless );
 		return handleBindless;
 	}
 
@@ -53,7 +54,7 @@ namespace jcqt
 		const char* sceneFile,
 		const char* materialFile )
 	{
-		if ( !g_extFunctionsIsInitialized )
+		if ( !g_extFunctionsInitialized )
 		{
 			initExtFunctions ( QOpenGLContext::currentContext () );
 		}

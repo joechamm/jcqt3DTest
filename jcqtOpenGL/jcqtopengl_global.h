@@ -30,7 +30,6 @@ SOFTWARE.
 #define __JCQTOPENGL_GLOBAL_H__
 
 #include <QtCore/qglobal.h>
-#include <qopenglext.h>
 
 #ifndef BUILD_STATIC
 # if defined(JCQTOPENGL_LIB)

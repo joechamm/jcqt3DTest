@@ -4,7 +4,7 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
-#include "jcqtopengl_ext_functions.h"
+#include "jcqtopengl_arb_extensions.h"
 
 namespace jcqt
 {
@@ -21,7 +21,7 @@ namespace jcqt
 	{
 		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
 
-		if ( !g_extFunctionsIsInitialized )
+		if ( !g_extFunctionsInitialized )
 		{
 			initExtFunctions ( ctx );
 		}
@@ -120,7 +120,7 @@ namespace jcqt
 		funcs->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kIdxBind_SSBOModelMatrices, m_modelMatricesBuffer );
 		funcs->glBindBuffer ( GL_DRAW_INDIRECT_BUFFER, m_indirectBuffer );
 		funcs->glBindBuffer ( GL_PARAMETER_BUFFER, m_indirectBuffer );
-//		funcs->glMultiDrawElementsIndirect ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, 0 );
-		glMultiDrawElementsIndirectCountARB ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, ( GLsizei ) data.shapes_.size (), 0 );
+		funcs->glMultiDrawElementsIndirect ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, 0 );
+//		glMultiDrawElementsIndirectCountARB ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, ( GLsizei ) data.shapes_.size (), 0 );
 	}
 }
