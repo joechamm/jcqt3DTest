@@ -26,8 +26,11 @@ SOFTWARE.
  * \author joechamm
  * \date   September 2022
  *********************************************************************/
-#pragma once
+#ifndef __JCQTOPENGL_GLOBAL_H__
+#define __JCQTOPENGL_GLOBAL_H__
+
 #include <QtCore/qglobal.h>
+#include <qopenglext.h>
 
 #ifndef BUILD_STATIC
 # if defined(JCQTOPENGL_LIB)
@@ -42,7 +45,7 @@ SOFTWARE.
 namespace jcqt
 {
 	// global constants
-	
+
 	// kIdxBind_ is the prefix for an OpenGL/GLSL buffer binding point
 
 	constexpr quint32 kIdxBind_TightBufferVtx = 0;
@@ -78,5 +81,8 @@ namespace jcqt
 	constexpr quint32 kIndex_Vertices = 1;
 	constexpr quint32 kIndex_Indirect = 2;
 	constexpr quint32 kIndex_ModelMatrices = 3;
-	constexpr quint32 kIndex_Materials = 4;	
+	constexpr quint32 kIndex_Materials = 4;
 }
+
+
+#endif // !__JCQTOPENGL_GLOBAL_H__

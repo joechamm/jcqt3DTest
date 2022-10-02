@@ -32,12 +32,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;opengl</QtModules>
+    <QtModules>core;gui;core5compat;opengl</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;opengl</QtModules>
+    <QtModules>core;gui;core5compat;opengl</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -101,6 +101,9 @@
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="DrawMesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
+    <ClCompile Include="openglfunctions_arb_extensions.cpp" />
+    <ClCompile Include="qopenglfunctions_4_6_core.cpp" />
+    <ClCompile Include="qopenglfunctions_nv_extensions.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneData.cpp" />
     <ClCompile Include="VtxData.cpp" />
@@ -109,6 +112,9 @@
     <ClInclude Include="Material.h" />
     <ClInclude Include="DrawMesh.h" />
     <ClInclude Include="MeshIndirect.h" />
+    <ClInclude Include="qopenglfunctions_4_6_core.h" />
+    <ClInclude Include="qopenglfunctions_arb_extensions.h" />
+    <ClInclude Include="qopenglfunctions_nv_extensions.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneData.h" />
     <ClInclude Include="Utils.h" />
