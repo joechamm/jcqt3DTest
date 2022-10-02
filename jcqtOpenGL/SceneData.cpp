@@ -37,15 +37,11 @@ namespace jcqt
 	{
 		if ( INVALID_TEXTURE == idx ) return 0;
 
-//		QOpenGLContext* ctx = QOpenGLContext::currentContext ();
-
 		GLuint handle = textures [ idx ]->textureId ();
 		GLuint* handlePtr = &handle;
 
-//		initExtFunctsions ( ctx );
-
-		GLuint64 handleBindless = jcqt::glGetTextureHandleARB ( handle );
-		//glMakeTextureHandleResidentARB ( handleBindless );
+		GLuint64 handleBindless = glGetTextureHandleARB ( handle );
+		glMakeTextureHandleResidentARB ( handleBindless );
 		return handleBindless;
 	}
 

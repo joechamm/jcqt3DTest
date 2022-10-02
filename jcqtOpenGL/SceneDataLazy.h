@@ -33,10 +33,9 @@ SOFTWARE.
 
 #include <QSharedPointer>
 #include <QOpenGLTexture>
+#include <QImage>
 #include <QMutex>
-#include <QThread>
 #include <QThreadPool>
-#include <QThreadStorage>
 #include <QtConcurrent>
 
 #include "Scene.h"
@@ -51,8 +50,7 @@ namespace jcqt
 		struct LoadedImageData
 		{
 			qint32 index_ = 0;
-			QSize size_ = { 0,0 };
-			const quint8* img_ = nullptr;
+			QImage* image_ = nullptr;
 		};
 
 		const QSharedPointer<QOpenGLTexture> dummyTexture_ = QSharedPointer<QOpenGLTexture>::create ( QImage ( ":/textures/const1.bmp" ) );
@@ -81,6 +79,7 @@ namespace jcqt
 		void loadScene ( const char* filename );
 		void updateMaterials ();
 
+		QThreadPool threadPool_;
 	};
 }
 

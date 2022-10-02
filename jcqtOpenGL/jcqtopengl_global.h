@@ -41,6 +41,8 @@ SOFTWARE.
 # define JCQTOPENGL_EXPORT
 #endif
 
+// TODO: Q_NAMESPACE_EXPORT
+
 namespace jcqt
 {
 	// global constants
