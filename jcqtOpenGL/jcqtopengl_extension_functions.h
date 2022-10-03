@@ -1,5 +1,5 @@
 /*****************************************************************//**
- * \file   jcqtopengl_arb_extensions.h
+ * \file   jcqtopengl_extension_functions.h
  * \licence MIT License
 
 Copyright (c) 2022 Joseph Cunningham
@@ -26,8 +26,8 @@ SOFTWARE.
  * \author joechamm
  * \date   October 2022
  *********************************************************************/
-#ifndef __JCQTOPENGL_ARB_EXTENSIONS_H__
-#define __JCQTOPENGL_ARB_EXTENSIONS_H__
+#ifndef __JCQTOPENGL_EXTENSION_FUNCTIONS_H__
+#define __JCQTOPENGL_EXTENSION_FUNCTIONS_H__
 
 #include "jcqtopengl_global.h"
 #include <QOpenGLContext>
@@ -36,7 +36,7 @@ namespace jcqt
 {
 	GLAPI bool g_extFunctionsInitialized;
 
-	// ARB_bindless_texture extension functions
+	// GL_ARB_bindless_texture extension functions
 	GLAPI PFNGLGETTEXTUREHANDLEARBPROC glGetTextureHandleARB;
 	GLAPI PFNGLGETTEXTURESAMPLERHANDLEARBPROC glGetTextureSamplerHandleARB;
 	GLAPI PFNGLGETIMAGEHANDLEARBPROC glGetImageHandleARB;
@@ -51,17 +51,43 @@ namespace jcqt
 	GLAPI PFNGLISTEXTUREHANDLERESIDENTARBPROC glIsTextureHandleResidentARB;
 	GLAPI PFNGLISIMAGEHANDLERESIDENTARBPROC glIsImageHandleResidentARB;
 
-	// ARB_indirect_parameters extension functions
-	GLAPI PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glMultiDrawArraysIndirectCountARB;
-	GLAPI PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glMultiDrawElementsIndirectCountARB;
+	// GL_ARB_indirect_parameters extension functions
+	GLAPI PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC glMultiDrawArraysIndirect;
+	GLAPI PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC glMultiDrawElementsIndirectCount;
 
-	// NV_mesh_shader extension functions
+	// GL_ARB_gl_spirv exteion functions
+	GLAPI PFNGLSPECIALIZESHADERPROC glSpecializeShader;
+
+	// GL_ARB_sparse_buffer
+	GLAPI PFNGLBUFFERPAGECOMMITMENTARBPROC glBufferPageCommitmentARB;
+	GLAPI PFNGLNAMEDBUFFERPAGECOMMITMENTARBPROC glNamedBufferPageCommitmentARB;
+
+	// GL_ARB_polygon_offset_clamp
+	GLAPI PFNGLPOLYGONOFFSETCLAMPPROC glPolygonOffsetClamp;
+
+	// GL_ARB_shading_language_include
+	GLAPI PFNGLCOMPILESHADERINCLUDEARBPROC glCompileShaderIncludeARB;
+	GLAPI PFNGLDELETENAMEDSTRINGARBPROC glDeleteNamedStringARB;
+	GLAPI PFNGLGETNAMEDSTRINGARBPROC glGetNamedStringARB;
+	GLAPI PFNGLGETNAMEDSTRINGIVARBPROC glGetNamedStringivARB;
+	GLAPI PFNGLISNAMEDSTRINGARBPROC glIsNamedStringARB;
+	GLAPI PFNGLNAMEDSTRINGARBPROC glNamedStringARB;
+
+	// GL_NV_mesh_shader extension functions
 	GLAPI PFNGLDRAWMESHTASKSNVPROC glDrawMeshTasksNV;
 	GLAPI PFNGLDRAWMESHTASKSINDIRECTNVPROC glDrawMeshTasksIndirectNV;
 	GLAPI PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC glMultiDrawMeshTasksIndirectNV;
 	GLAPI PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC glMultiDrawMeshTasksIndirectCountNV;
 
+	// GL_NV_memory_attachment
+	GLAPI PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC glGetMemoryObjectDetachedResourcesuivNV;
+	GLAPI PFNGLRESETMEMORYOBJECTPARAMETERNVPROC glResetMemoryObjectParameterNV;
+	GLAPI PFNGLTEXATTACHMEMORYNVPROC glTexAttachMemoryNV;
+	GLAPI PFNGLBUFFERATTACHMEMORYNVPROC glBufferAttachMemoryNV;
+	GLAPI PFNGLTEXTUREATTACHMEMORYNVPROC glTextureAttachMemoryNV;
+	GLAPI PFNGLNAMEDBUFFERATTACHMEMORYNVPROC glNamedBufferAttachMemoryNV;
+
 	GLAPI bool JCQTOPENGL_EXPORT initExtFunctions ( QOpenGLContext* context );
 }
 
-#endif // !__JCQTOPENGL_ARB_EXTENSIONS_H__
+#endif // !__JCQTOPENGL_EXTENSION_FUNCTIONS_H__

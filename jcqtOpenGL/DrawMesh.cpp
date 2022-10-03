@@ -4,7 +4,7 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
-#include "jcqtopengl_arb_extensions.h"
+#include "jcqtopengl_extension_functions.h"
 
 namespace jcqt
 {
@@ -121,6 +121,6 @@ namespace jcqt
 		funcs->glBindBuffer ( GL_DRAW_INDIRECT_BUFFER, m_indirectBuffer );
 		funcs->glBindBuffer ( GL_PARAMETER_BUFFER, m_indirectBuffer );
 //		funcs->glMultiDrawElementsIndirect ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, 0 );
-		glMultiDrawElementsIndirectCountARB ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, ( GLsizei ) data.shapes_.size (), 0 );
+		glMultiDrawElementsIndirectCount ( GL_TRIANGLES, GL_UNSIGNED_INT, ( const void* ) sizeof ( GLsizei ), 0, ( GLsizei ) data.shapes_.size (), 0 );
 	}
 }

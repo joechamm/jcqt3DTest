@@ -5,7 +5,7 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
-#include "jcqtopengl_arb_extensions.h"
+#include "jcqtopengl_extension_functions.h"
 
 //#include <qopenglfunctions.h>
 //typedef GLuint64 (__stdcall PFN)

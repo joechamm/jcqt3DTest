@@ -1,6 +1,6 @@
 #include "SceneDataLazy.h"
 
-#include "jcqtopengl_arb_extensions.h"
+#include "jcqtopengl_extension_functions.h"
 
 namespace jcqt
 {
@@ -44,18 +44,6 @@ namespace jcqt
 				this->loadedFiles_.emplaceBack ( LoadedImageData { .index_ = idx++, .image_ = pImg } );
 			}
 			} );
-
-		//QtConcurrent::
-
-		//// load images concurrently
-		//QFuture<void> future = QtConcurrent::map ( textureFiles_, [this] ( int idx ) {
-		//		QImage* pImg = new QImage ( this->textureFiles_ [ idx ] );
-		//		if ( pImg )
-		//		{
-		//			QMutexLocker locker ( &( this->loadedFilesMutex_ ) );
-		//			this->loadedFiles_.emplaceBack ( LoadedImageData { .index_ = idx, .image_ = pImg } );
-		//		}			
-		//	} );
 
 		// TODO: handle future
 	}

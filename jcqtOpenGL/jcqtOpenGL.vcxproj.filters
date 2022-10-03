@@ -50,7 +50,7 @@
     <ClInclude Include="SceneData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="jcqtopengl_arb_extensions.h">
+    <ClInclude Include="jcqtopengl_extension_functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SceneDataLazy.h">
@@ -76,7 +76,7 @@
     <ClCompile Include="SceneData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="jcqtopengl_arb_extensions.cpp">
+    <ClCompile Include="jcqtopengl_extension_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SceneDataLazy.cpp">
