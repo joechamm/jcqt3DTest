@@ -1,4 +1,5 @@
-#include "Utils.h"
+#include "UtilsCubemap.h"
+#include <QPixmap>
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
@@ -116,7 +117,7 @@ namespace jcqt
 			{
 				for ( qint32 i = 0; i != faceWidth; ++i )
 				{
-					qint32 x = 0; 
+					qint32 x = 0;
 					qint32 y = 0;
 
 					switch ( face )
@@ -168,7 +169,7 @@ namespace jcqt
 
 		QImage::Format fmt = img.format ();
 		eBitmapFormat bfmt = eBitmapFormat::eBitmapFormat_UNSIGNED_BYTE;
-		
+
 		switch ( fmt )
 		{
 		case QImage::Format_Invalid:
@@ -261,19 +262,19 @@ namespace jcqt
 			comp = 3;
 			break;
 		case QImage::Format_RGBX16FPx4:
-			bfmt = eBitmapFormat::eBitmapFormat_FLOAT
+			bfmt = eBitmapFormat::eBitmapFormat_FLOAT;
 			comp = 4;
 			break;
 		case QImage::Format_RGBA16FPx4:
-			bfmt = eBitmapFormat::eBitmapFormat_FLOAT
+			bfmt = eBitmapFormat::eBitmapFormat_FLOAT;
 			comp = 4;
 			break;
 		case QImage::Format_RGBA16FPx4_Premultiplied:
-			bfmt = eBitmapFormat::eBitmapFormat_FLOAT
+			bfmt = eBitmapFormat::eBitmapFormat_FLOAT;
 			comp = 4;
 			break;
 		case QImage::Format_RGBX32FPx4:
-			bfmt = eBitmapFormat::eBitmapFormat_FLOAT
+			bfmt = eBitmapFormat::eBitmapFormat_FLOAT;
 			comp = 4;
 			break;
 		case QImage::Format_RGBA32FPx4:
@@ -290,12 +291,41 @@ namespace jcqt
 			break;
 		}
 
-		
+
 		Bitmap result ( w, h, comp, bfmt, img.constBits () );
 
 		return result;
 	}
+
+	QImage JCQTOPENGL_EXPORT convertBitmapToQImage ( const Bitmap& b )
+	{
+		if ( b.type_ != eBitmapType::eBitmapType_2D ) return QImage ();
+
+		const qint32 w = b.w_;
+		const qint32 h = b.h_;
+		const qint32 comp = b.comp_;
+		QImage::Format fmt;
+		if ( b.fmt_ == eBitmapFormat::eBitmapFormat_FLOAT )
+		{
+			fmt = QImage::Format_RGBA32FPx4;
+		}
+		else
+		{
+			fmt = QImage::Format_ARGB32;
+		}
+
+		QImage image ( w, h, fmt );
+		for ( qint32 row = 0; row < h; ++row )
+		{
+			QRgb* line = reinterpret_cast< QRgb* >( image.scanLine ( row ) );
+			for ( qint32 col = 0; col < w; ++col )
+			{
+				vec4 color = b.getPixel ( col, row );
+				QRgb& rgb = line [ col ];
+				rgb = qRgba ( ( int ) color.r * 255.0f, ( int ) color.g * 255.0f, ( int ) color.b * 255.0f, ( int ) color.a * 255.0f );
+			}
+		}
+
+		return image;
+	}
 }
-
-
-

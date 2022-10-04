@@ -30,11 +30,9 @@ SOFTWARE.
 #define __UTILS_H__
 
 #include "jcqtopengl_global.h"
-#include "Bitmap.h"
 
 #include <QList>
 #include <QByteArrayList>
-#include <QImage>
 
 namespace jcqt
 {
@@ -76,12 +74,6 @@ namespace jcqt
 						static_cast< Index >( static_cast< const T* >( &item ) - &v [ 0 ] ) );
 				} ) ) );
 	}
-
-	Bitmap JCQTOPENGL_EXPORT convertEquirectangularMapToVerticalCross ( const Bitmap& b );
-	Bitmap JCQTOPENGL_EXPORT convertVerticalCrossToCubeMapFaces ( const Bitmap& b );
-
-	Bitmap JCQTOPENGL_EXPORT convertQImageToBitmap ( const QImage& img );
-	QImage JCQTOPENGL_EXPORT convertBitmapToQImage ( const Bitmap& b );
 }
 
 

@@ -107,7 +107,7 @@
     <ClCompile Include="SceneData.cpp" />
     <ClCompile Include="SceneDataLazy.cpp" />
     <ClCompile Include="SkyboxRenderer.cpp" />
-    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="UtilsCubemap.cpp" />
     <ClCompile Include="VtxData.cpp" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Camera.h" />
@@ -121,6 +121,7 @@
     <ClInclude Include="SceneDataLazy.h" />
     <ClInclude Include="SkyboxRenderer.h" />
     <ClInclude Include="Utils.h" />
+    <ClInclude Include="UtilsCubemap.h" />
     <ClInclude Include="UtilsMath.h" />
     <ClInclude Include="VtxData.h" />
   </ItemGroup>

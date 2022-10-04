@@ -65,6 +65,9 @@
     <ClInclude Include="Bitmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UtilsCubemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MeshIndirect.cpp">
@@ -94,7 +97,7 @@
     <ClCompile Include="SkyboxRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utils.cpp">
+    <ClCompile Include="UtilsCubemap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

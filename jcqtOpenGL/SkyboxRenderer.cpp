@@ -4,6 +4,8 @@
 #include <QOpenGLVersionFunctionsFactory>
 #include <QOpenGLFunctions_4_5_Core>
 
+
+
 namespace jcqt
 {
 	SkyboxRenderer::SkyboxRenderer ( const QString& envMap, const QString& envMapIrradiance )
