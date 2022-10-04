@@ -106,7 +106,11 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneData.cpp" />
     <ClCompile Include="SceneDataLazy.cpp" />
+    <ClCompile Include="SkyboxRenderer.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="VtxData.cpp" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="jcqtopengl_global.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="DrawMesh.h" />
@@ -115,6 +119,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneData.h" />
     <ClInclude Include="SceneDataLazy.h" />
+    <ClInclude Include="SkyboxRenderer.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="UtilsMath.h" />
     <ClInclude Include="VtxData.h" />
