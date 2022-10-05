@@ -45,7 +45,8 @@ namespace jcqt
 		GLuint									m_dummyVAO;
 
 	public:
-		SkyboxRenderer ( const QString& envMap = ":/textures/immenstadter_horn_2k.hdr", const QString& envMapIrradiance = ":/textures/immenstadter_horn_2k_irradiance.hdr" );
+		SkyboxRenderer ( const char* envMap = ":/textures/immenstadter_horn_2k.hdr", 
+			const char* envMapIrradiance = ":/textures/immenstadter_horn_2k_irradiance.hdr" );
 		~SkyboxRenderer ();
 
 		void draw () const;

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\stb\build\CMakeFiles\5ede301e75cde750053d462cf3cde6e2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D0829CB7-D92C-3191-AE49-95445C6E46A7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

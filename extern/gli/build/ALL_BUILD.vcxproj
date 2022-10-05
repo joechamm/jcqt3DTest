@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{267CF3DE-F76B-3BF8-957A-5FDDC175F87D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli -BD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build --check-stamp-file D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeSystem.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\CMakePackageConfigHelpers.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\GNUInstallDirs.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliBuildConfig.cmake.in;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli -BD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build --check-stamp-file D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeSystem.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\CMakePackageConfigHelpers.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\GNUInstallDirs.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliBuildConfig.cmake.in;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli -BD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build --check-stamp-file D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeSystem.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\CMakePackageConfigHelpers.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\GNUInstallDirs.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliBuildConfig.cmake.in;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/src/gli -BD:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build --check-stamp-file D:/local/my_github_repos/QtProjectTestsVS2022/jcqt3DTest/extern/gli/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeCXXCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeRCCompiler.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\3.23.1\CMakeSystem.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\CMakePackageConfigHelpers.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\GNUInstallDirs.cmake;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliBuildConfig.cmake.in;D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\cmake\gliConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\ZERO_CHECK.vcxproj">
+      <Project>{AAAA31D9-62F4-3215-8A56-8184044A021C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\gli\gli_dummy.vcxproj">
+      <Project>{16FDEEDA-AD1E-3BD9-BDA1-5AA3FB695983}</Project>
+      <Name>gli_dummy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\bug\test-bug.vcxproj">
+      <Project>{4193EBB7-A236-358C-9F74-7781C02DFA59}</Project>
+      <Name>test-bug</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler1d.vcxproj">
+      <Project>{7CF50976-BE1B-3FD5-A9C1-042B0D6BAA8D}</Project>
+      <Name>test-convert_sampler1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler1d_array.vcxproj">
+      <Project>{877533E0-1235-39F2-95AF-3997A8913B6E}</Project>
+      <Name>test-convert_sampler1d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler2d.vcxproj">
+      <Project>{6F888098-03B7-304B-B9CC-9BC9DA39DC1B}</Project>
+      <Name>test-convert_sampler2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler2d_array.vcxproj">
+      <Project>{0856BFF9-DC6F-33DF-A6D4-493AC716A017}</Project>
+      <Name>test-convert_sampler2d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler3d.vcxproj">
+      <Project>{3D451685-2EF3-324C-A0BE-85D758466DFF}</Project>
+      <Name>test-convert_sampler3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler_cube.vcxproj">
+      <Project>{3473F87F-E9D6-3B87-A35E-94B1C5AC2DCA}</Project>
+      <Name>test-convert_sampler_cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-convert_sampler_cube_array.vcxproj">
+      <Project>{24D1CBDC-08D3-3E4D-B944-42535A987B41}</Project>
+      <Name>test-convert_sampler_cube_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core.vcxproj">
+      <Project>{23FD8C82-2DCB-3D3E-A0BA-D6D53E49E4B1}</Project>
+      <Name>test-core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_addressing.vcxproj">
+      <Project>{7CD89C5C-069A-39E8-ACCC-FE07DB969A9E}</Project>
+      <Name>test-core_addressing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_clear.vcxproj">
+      <Project>{30799374-F63A-3298-A9A0-7B8D559D7C9F}</Project>
+      <Name>test-core_clear</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_comparison.vcxproj">
+      <Project>{DB39A78A-1E55-3D0D-8572-D9AA03A64D76}</Project>
+      <Name>test-core_comparison</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_convert.vcxproj">
+      <Project>{CE8B0909-971C-3BBF-A75C-04E6F99368B9}</Project>
+      <Name>test-core_convert</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_convert_access.vcxproj">
+      <Project>{A5EF7942-48F3-3BE6-B8F0-F3D31E244682}</Project>
+      <Name>test-core_convert_access</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_fetch.vcxproj">
+      <Project>{53C38F3A-472D-3E57-B0DC-2DF8B8D10509}</Project>
+      <Name>test-core_fetch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_filter_1d.vcxproj">
+      <Project>{3CAF756F-DDDD-39BB-9AEC-61DE140904CD}</Project>
+      <Name>test-core_filter_1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_filter_2d.vcxproj">
+      <Project>{44637112-71EB-3F23-ACBE-5D82F7F651EB}</Project>
+      <Name>test-core_filter_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_filter_3d.vcxproj">
+      <Project>{2BE0D832-5722-39F0-97F9-6F8C90AB8FA9}</Project>
+      <Name>test-core_filter_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_flip.vcxproj">
+      <Project>{595C5EBE-38A2-311B-8578-CD931CE8BC56}</Project>
+      <Name>test-core_flip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_format.vcxproj">
+      <Project>{4EBEC229-9C9D-394A-9593-1CE5D736EC88}</Project>
+      <Name>test-core_format</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_image.vcxproj">
+      <Project>{70325C7C-79F7-32BB-B818-72CDB5868344}</Project>
+      <Name>test-core_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load.vcxproj">
+      <Project>{36CCB634-B091-352E-B23B-0D2788EA6176}</Project>
+      <Name>test-core_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_dds.vcxproj">
+      <Project>{73795C90-3F73-3E8A-ABF2-AB0754F45CBD}</Project>
+      <Name>test-core_load_dds</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_1d.vcxproj">
+      <Project>{7C385157-BE0C-33BE-8D99-518588895F42}</Project>
+      <Name>test-core_load_gen_1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_1d_array.vcxproj">
+      <Project>{06311D7E-C147-38DF-8EB3-FCF0301FC187}</Project>
+      <Name>test-core_load_gen_1d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_2d.vcxproj">
+      <Project>{BBEBCA3F-0145-373A-91E1-FD974463333A}</Project>
+      <Name>test-core_load_gen_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_2d_array.vcxproj">
+      <Project>{2EBD0127-249F-3BE9-944F-F1A523C38411}</Project>
+      <Name>test-core_load_gen_2d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_3d.vcxproj">
+      <Project>{AFD0D4BC-D215-3D25-B82C-6FA634D2762E}</Project>
+      <Name>test-core_load_gen_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_cube.vcxproj">
+      <Project>{01C0330F-4EA6-3863-A1DE-381CF54B049C}</Project>
+      <Name>test-core_load_gen_cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_cube_array.vcxproj">
+      <Project>{24B4D29D-83E7-376A-B5C9-90EC69DFCF53}</Project>
+      <Name>test-core_load_gen_cube_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_gen_rect.vcxproj">
+      <Project>{FAD9BF5A-6979-38A6-A83B-F98BE4C5446C}</Project>
+      <Name>test-core_load_gen_rect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_load_ktx.vcxproj">
+      <Project>{5CD09ED1-2170-3F61-81B5-9D5C5D9ACB97}</Project>
+      <Name>test-core_load_ktx</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_sample.vcxproj">
+      <Project>{811295EF-7EF0-3AF4-A625-059A95AE5204}</Project>
+      <Name>test-core_sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_sampler_clear.vcxproj">
+      <Project>{698A82F0-058A-32D2-8474-EF4F9ED35349}</Project>
+      <Name>test-core_sampler_clear</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_sampler_texel.vcxproj">
+      <Project>{36A623C4-75A7-3990-9292-A8DDFBDB7EAD}</Project>
+      <Name>test-core_sampler_texel</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_sampler_wrap.vcxproj">
+      <Project>{6E468185-1690-3461-ABD7-EB404E70F6B6}</Project>
+      <Name>test-core_sampler_wrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_save.vcxproj">
+      <Project>{579DDA75-6CF6-37CF-BF94-C2AC8453AFAE}</Project>
+      <Name>test-core_save</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_storage.vcxproj">
+      <Project>{F18E68A0-19D1-3DA3-AB65-5F58C46498BA}</Project>
+      <Name>test-core_storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_swizzle.vcxproj">
+      <Project>{1B024E26-953A-3643-8E0F-F25274E14F84}</Project>
+      <Name>test-core_swizzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture.vcxproj">
+      <Project>{CB89EA55-D097-37B3-ABC3-FCAEAEBC4EAD}</Project>
+      <Name>test-core_texture</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_1d.vcxproj">
+      <Project>{A4D16599-D173-36DB-A52E-BFEF4191E4A2}</Project>
+      <Name>test-core_texture_1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_1d_array.vcxproj">
+      <Project>{3313819F-A7A8-34FC-9029-61F2790B4D84}</Project>
+      <Name>test-core_texture_1d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_2d.vcxproj">
+      <Project>{A6F8A0C5-857E-3933-9FF4-DB9DE8627598}</Project>
+      <Name>test-core_texture_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_2d_array.vcxproj">
+      <Project>{81EE38B1-2350-339A-A8FC-911A3D59B4F9}</Project>
+      <Name>test-core_texture_2d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_3d.vcxproj">
+      <Project>{022C8FF0-8865-39C8-8A37-2982BEA5FFC8}</Project>
+      <Name>test-core_texture_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_cube.vcxproj">
+      <Project>{FBD95311-92E5-3495-A677-4A45AF488D7D}</Project>
+      <Name>test-core_texture_cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-core_texture_cube_array.vcxproj">
+      <Project>{9A11D994-428E-3D11-80AA-59F274A3319C}</Project>
+      <Name>test-core_texture_cube_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler1d.vcxproj">
+      <Project>{2E12B840-87D5-3ACF-AB64-6A20983535B9}</Project>
+      <Name>test-generate_mipmaps_sampler1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler1d_array.vcxproj">
+      <Project>{08BA6F44-DD7F-3619-9936-89A513C38609}</Project>
+      <Name>test-generate_mipmaps_sampler1d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler2d.vcxproj">
+      <Project>{F5A18147-31DD-325E-B19B-DADCE01D589A}</Project>
+      <Name>test-generate_mipmaps_sampler2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler2d_array.vcxproj">
+      <Project>{49DDEB24-D7B8-3378-B77F-3E057B588DA4}</Project>
+      <Name>test-generate_mipmaps_sampler2d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler3d.vcxproj">
+      <Project>{44421877-DA8A-36C2-ABD8-4A498D66B510}</Project>
+      <Name>test-generate_mipmaps_sampler3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler_cube.vcxproj">
+      <Project>{4AFAEC59-2F1F-32A9-B2F7-B6F473D68668}</Project>
+      <Name>test-generate_mipmaps_sampler_cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-generate_mipmaps_sampler_cube_array.vcxproj">
+      <Project>{D7905211-9129-36CF-A4E5-6FDA61E984E3}</Project>
+      <Name>test-generate_mipmaps_sampler_cube_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-gl.vcxproj">
+      <Project>{ED28F338-984A-3F9C-8275-3583D40F7156}</Project>
+      <Name>test-gl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-reduce.vcxproj">
+      <Project>{B49D6E09-6FBC-382A-83D1-4C6BE4FFAFA4}</Project>
+      <Name>test-reduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_copy.vcxproj">
+      <Project>{B413AD8F-C81A-39DE-9E90-675C7BC70E5F}</Project>
+      <Name>test-test_copy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_copy_sub.vcxproj">
+      <Project>{F6F05D4A-8F74-3805-8749-BE602151FBC5}</Project>
+      <Name>test-test_copy_sub</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_duplicate.vcxproj">
+      <Project>{F04B1CD7-28B2-3899-B1B3-C443A5C93208}</Project>
+      <Name>test-test_duplicate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_make_texture.vcxproj">
+      <Project>{ECD0D89A-A9F3-3203-8B00-EBC1FCC338E1}</Project>
+      <Name>test-test_make_texture</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_size.vcxproj">
+      <Project>{AA975FAB-BA74-3A3E-8EA6-9F3A9AEB6887}</Project>
+      <Name>test-test_size</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-test_view.vcxproj">
+      <Project>{A6C970CA-0282-3AAE-8418-1089FAD371AB}</Project>
+      <Name>test-test_view</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler1d.vcxproj">
+      <Project>{2D95D2A3-5752-363F-865E-E81D36665296}</Project>
+      <Name>test-texture_lod_sampler1d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler1d_array.vcxproj">
+      <Project>{E3FC1FD7-B9B2-33F0-8DF5-9A436BF0E32C}</Project>
+      <Name>test-texture_lod_sampler1d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler2d.vcxproj">
+      <Project>{D183A44B-A325-326E-850E-847A2FE6EA7D}</Project>
+      <Name>test-texture_lod_sampler2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler2d_array.vcxproj">
+      <Project>{24025923-FD9A-3FCC-8D30-2D80BAA711B4}</Project>
+      <Name>test-texture_lod_sampler2d_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler3d.vcxproj">
+      <Project>{A38844A4-A5AF-37B3-8295-AAC9CB828FCE}</Project>
+      <Name>test-texture_lod_sampler3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler_cube.vcxproj">
+      <Project>{17900EA8-2FD2-3D0C-B0DF-0171B6860E6C}</Project>
+      <Name>test-texture_lod_sampler_cube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-texture_lod_sampler_cube_array.vcxproj">
+      <Project>{33B919B8-DB6F-30C4-9F3C-380AAA24067F}</Project>
+      <Name>test-texture_lod_sampler_cube_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\build\test\core\test-transform.vcxproj">
+      <Project>{82C4371C-CC06-3049-AE99-01354E359B88}</Project>
+      <Name>test-transform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

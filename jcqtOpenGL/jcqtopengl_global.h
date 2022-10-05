@@ -60,6 +60,10 @@ namespace jcqt
 	constexpr quint32 kIdxBind_SSBOMaterials = 8;
 	constexpr quint32 kIdxBind_SSBOModelMatrices = 9;
 
+	constexpr quint32 kIdxTex_EnvMap = 5;
+	constexpr quint32 kIdxTex_EnvMapIrradiance = 6;
+	constexpr quint32 kIdxTex_brdfLUT = 7;
+
 	constexpr quint32 kIdxLoc_POSITION = 0;
 	constexpr quint32 kIdxLoc_NORMAL = 1;
 	constexpr quint32 kIdxLoc_TANGENT = 2;

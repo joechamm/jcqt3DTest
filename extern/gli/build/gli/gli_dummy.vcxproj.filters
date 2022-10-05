@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\dummy.cpp">
+      <Filter>Core Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\clear.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\comparison.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\convert.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\copy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\duplicate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\dx.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\format.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\generate_mipmaps.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\gl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\gli.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\image.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\levels.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\load.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\load_dds.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\load_kmg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\load_ktx.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\make_texture.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\reduce.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler1d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler1d_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler2d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler2d_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler3d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler_cube.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\sampler_cube_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\save.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\save_dds.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\save_kmg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\save_ktx.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\target.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture1d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture1d_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture2d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture2d_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture3d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture_cube.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\texture_cube_array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\transform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\view.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\bc.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\clear.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\comparison.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\convert.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\copy.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\duplicate.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\dx.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\file.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\filter.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\flip.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\format.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\generate_mipmaps.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\gl.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\image.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\levels.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\load.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\load_dds.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\load_kmg.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\load_ktx.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\make_texture.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\reduce.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\s3tc.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler1d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler1d_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler2d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler2d_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler3d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler_cube.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\sampler_cube_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\save.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\save_dds.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\save_kmg.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\save_ktx.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\storage_linear.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture1d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture1d_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture2d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture2d_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture3d.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture_cube.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\texture_cube_array.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\transform.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\view.inl">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\bc.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\clear.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\convert_func.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\coord.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\file.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\filter.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\filter_compute.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\flip.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\mipmaps_compute.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\s3tc.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\core\storage_linear.hpp">
+      <Filter>Core Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\gli\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\CMakeLists.txt">
+      <Filter>Text Files</Filter>
+    </None>
+    <None Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\manual.md">
+      <Filter>Text Files</Filter>
+    </None>
+    <None Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\readme.md">
+      <Filter>Text Files</Filter>
+    </None>
+    <None Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\doc\spec\index.html">
+      <Filter>KMG Spec</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core Files">
+      <UniqueIdentifier>{C4C281C5-0D67-3B1A-A7CF-9D7E90992311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A4EEAA05-980C-3834-AC1B-5E4DD90E0FE4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KMG Spec">
+      <UniqueIdentifier>{683DABB9-29A7-3F02-B922-F949FCCD5D70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Text Files">
+      <UniqueIdentifier>{CEF569FD-11BE-344D-B633-3729950A0164}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

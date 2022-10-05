@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\test\core\gl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\local\my_github_repos\QtProjectTestsVS2022\jcqt3DTest\extern\gli\src\gli\test\core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{357138C1-5CD3-3526-9B73-4C9EBA8ACB85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
