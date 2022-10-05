@@ -99,6 +99,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LineCanvas.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="DrawMesh.cpp" />
     <ClCompile Include="MeshIndirect.cpp" />
@@ -112,6 +113,7 @@
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="jcqtopengl_global.h" />
+    <ClInclude Include="LineCanvas.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="DrawMesh.h" />
     <ClInclude Include="MeshIndirect.h" />

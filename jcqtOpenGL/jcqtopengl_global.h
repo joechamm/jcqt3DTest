@@ -59,6 +59,7 @@ namespace jcqt
 	constexpr quint32 kIdxBind_SepBufferVtxWeights = 7;
 	constexpr quint32 kIdxBind_SSBOMaterials = 8;
 	constexpr quint32 kIdxBind_SSBOModelMatrices = 9;
+	constexpr quint32 kIdxBind_SSBOVertices = 1;
 
 	constexpr quint32 kIdxTex_EnvMap = 5;
 	constexpr quint32 kIdxTex_EnvMapIrradiance = 6;
