@@ -10,6 +10,7 @@
 
 #include <glm/gtx/texture.hpp>
 
+#define STB_IMAGE_IMPLEMENTATION
 #include "../extern/stb/src/include/stb/stb_image.h"
 #include "../extern/gli/src/gli/gli/gli.hpp"
 #include "../extern/gli/src/gli/gli/texture2d.hpp"
@@ -195,7 +196,7 @@ namespace jcqt
 		auto f = QOpenGLVersionFunctionsFactory::get<QOpenGLFunctions_4_5_Core> ( ctx );
 
 		m_program->bind ();
-		f->glBindTextureUnit ( 1, m_envMap->textureId () );
+		f->glBindTextureUnit ( kIdxTex_SamplerCube, m_envMap->textureId () );
 		f->glDepthMask ( GL_FALSE );
 		f->glBindVertexArray ( m_dummyVAO );
 		f->glDrawArrays ( GL_TRIANGLES, 0, 36 );

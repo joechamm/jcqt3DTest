@@ -14,4 +14,5 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
+RESOURCES += ./assets.qrc
 include(jcqtOpenGL.pri)

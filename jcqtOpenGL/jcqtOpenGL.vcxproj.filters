@@ -114,6 +114,18 @@
     <None Include="jcqtOpenGL.pro">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="assets\shaders\GL_cube.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_cube.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_lines.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_lines.vert">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="assets.qrc">

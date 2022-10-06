@@ -49,18 +49,21 @@ namespace jcqt
 
 	// kIdxBind_ is the prefix for an OpenGL/GLSL buffer binding point
 
-	constexpr quint32 kIdxBind_TightBufferVtx = 0;
-	constexpr quint32 kIdxBind_SepBufferVtxPositions = 1;
-	constexpr quint32 kIdxBind_SepBufferVtxNormals = 2;
-	constexpr quint32 kIdxBind_SepBufferVtxTexCoords = 3;
-	constexpr quint32 kIdxBind_SepBufferVtxTangents = 4;
-	constexpr quint32 kIdxBind_SepBufferVtxColors = 5;
-	constexpr quint32 kIdxBind_SepBufferVtxJoints = 6;
-	constexpr quint32 kIdxBind_SepBufferVtxWeights = 7;
+	constexpr quint32 kIdxBind_VBOTightBuffer = 0;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxPositions = 1;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxNormals = 2;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxTexCoords = 3;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxTangents = 4;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxColors = 5;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxJoints = 6;
+	constexpr quint32 kIdxBind_VBOSepBufferVtxWeights = 7;
+	constexpr quint32 kIdxBind_SSBOVertices = 1;
 	constexpr quint32 kIdxBind_SSBOMaterials = 8;
 	constexpr quint32 kIdxBind_SSBOModelMatrices = 9;
-	constexpr quint32 kIdxBind_SSBOVertices = 1;
+	constexpr quint32 kIdxBind_UBOPerFrameData_Lines = 7;
+	constexpr quint32 kIdxBind_UBOPerFrameData_Cube = 8;
 
+	constexpr quint32 kIdxTex_SamplerCube = 1;
 	constexpr quint32 kIdxTex_EnvMap = 5;
 	constexpr quint32 kIdxTex_EnvMapIrradiance = 6;
 	constexpr quint32 kIdxTex_brdfLUT = 7;

@@ -41,6 +41,8 @@ SOFTWARE.
 #include "../jcqtOpenGL/MeshIndirect.h"
 #include "../jcqtOpenGL/SceneData.h"
 #include "../jcqtOpenGL/Camera.h"
+#include "../jcqtOpenGL/LineCanvas.h"
+#include "../jcqtOpenGL/SkyboxRenderer.h"
 #include "../jcqtOpenGL/jcqtopengl_extension_functions.h"
 
 #include <glm/glm.hpp>
@@ -74,6 +76,7 @@ protected:
 	void resizeGL (int w, int h) override;
 
 	void keyPressEvent ( QKeyEvent* e ) override;
+	void keyReleaseEvent ( QKeyEvent* e ) override;
 	void mouseDoubleClickEvent ( QMouseEvent* ev ) override;
 	void mouseMoveEvent ( QMouseEvent* ev ) override;
 	void mousePressEvent ( QMouseEvent* ev ) override;
@@ -101,6 +104,8 @@ private:
 	void teardownDebugLogger ();
 	void teardownTimeMonitor ();
 
+	float getDeltaSeconds (qint32 currentTimeMS) const;
+
 	struct PerFrameData
 	{
 		mat4 view;
@@ -118,8 +123,13 @@ private:
 		bool pressedLeft = false;
 	};
 
+
+	qint32									m_timeStampMS;
+
 	bool									m_freezeCullingView;
 	bool									m_enableGPUCulling;
+	bool									m_drawMeshes;
+	bool									m_drawGrid;
 
 	MouseState								m_mouseState;
 	PerFrameData							m_perFrameData;
@@ -137,7 +147,11 @@ private:
 	QSharedPointer<QOpenGLShaderProgram>	m_cullProgram;
 
 	QSharedPointer<SceneData>				m_sceneData;
-	QSharedPointer<DrawMesh>				m_mesh;
+//	QSharedPointer<DrawMesh>				m_mesh;
+	QSharedPointer<MeshIndirect<SceneData>> m_indirectMesh;
+
+	QSharedPointer<SkyboxRenderer>			m_skyboxRenderer;
+	QSharedPointer<LineCanvas>				m_lineCanvas;
 
 	GLuint									m_perFrameDataBuffer;
 	GLuint									m_boundingBoxesBuffer;

@@ -32,4 +32,32 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="jcqt3DTest.pri">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="jcqt3DTest.pro">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_FrustumCulling.comp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_grid.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_grid.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_scene_IBL.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\shaders\GL_scene_IBL.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="assets.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
 </Project>

@@ -42,23 +42,23 @@ namespace jcqt
 
 		funcs->glCreateVertexArrays ( 1, &m_vao );
 		funcs->glVertexArrayElementBuffer ( m_vao, m_indexBuffer );
-		funcs->glVertexArrayVertexBuffer ( m_vao, kIdxBind_TightBufferVtx, m_vertexBuffer, 0, sizeof ( vec3 ) + sizeof ( vec3 ) + sizeof ( vec2 ) );
+		funcs->glVertexArrayVertexBuffer ( m_vao, kIdxBind_VBOTightBuffer, m_vertexBuffer, 0, sizeof ( vec3 ) + sizeof ( vec3 ) + sizeof ( vec2 ) );
 
 		// position
 		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_POSITION );
 		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_POSITION, 3, GL_FLOAT, GL_FALSE, 0 );
-		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_POSITION, kIdxBind_TightBufferVtx );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_POSITION, kIdxBind_VBOTightBuffer );
 
 		// uv 
 		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_TEXCOORD_0 );
 		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_TEXCOORD_0, 2, GL_FLOAT, GL_FALSE, sizeof(vec3) );
-		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_TEXCOORD_0, kIdxBind_TightBufferVtx );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_TEXCOORD_0, kIdxBind_VBOTightBuffer );
 
 	
 		// normal
 		funcs->glEnableVertexArrayAttrib ( m_vao, kIdxLoc_NORMAL );
 		funcs->glVertexArrayAttribFormat ( m_vao, kIdxLoc_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(vec3) + sizeof(vec2) );
-		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_NORMAL, kIdxBind_TightBufferVtx );
+		funcs->glVertexArrayAttribBinding ( m_vao, kIdxLoc_NORMAL, kIdxBind_VBOTightBuffer );
 
 		QByteArray drawCommands;
 

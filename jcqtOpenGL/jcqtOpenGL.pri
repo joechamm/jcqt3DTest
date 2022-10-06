@@ -9,20 +9,28 @@ message("You are running qmake on a generated .pro file. This may not work!")
 
 HEADERS += ./jcqtopengl_global.h \
     ./jcqtopengl_extension_functions.h \
+    ./Bitmap.h \ 
+    ./Camera.h \
     ./Material.h \
     ./DrawMesh.h \
+    ./LineCanvas.h \
     ./MeshIndirect.h \
     ./Scene.h \
     ./SceneData.h \
     ./SceneDataLazy.h \
+    ./SkyboxRenderer.h \
     ./Utils.h \
+    ./UtilsCubemap.h \
     ./UtilsMath.h \
     ./VtxData.h
 SOURCES += ./Material.cpp \
+    ./LineCanvas.cpp \
     ./jcqtopengl_extension_functions.cpp
     ./DrawMesh.cpp \
     ./MeshIndirect.cpp \
     ./Scene.cpp \
     ./SceneData.cpp \
     ./SceneDataLazy.cpp \
+    ./SkyboxRenderer.cpp \ 
+    ./UtilsCubemap.cpp \
     ./VtxData.cpp

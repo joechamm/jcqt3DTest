@@ -32,12 +32,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;opengl;</QtModules>
+    <QtModules>core;gui;concurrent;opengl;</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.4.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;opengl;</QtModules>
+    <QtModules>core;gui;concurrent;opengl;</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -99,6 +99,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ShadowMapWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\GL_FrustumCulling.comp" />
+    <None Include="assets\shaders\GL_grid.frag" />
+    <None Include="assets\shaders\GL_grid.vert" />
+    <None Include="assets\shaders\GL_scene_IBL.frag" />
+    <None Include="assets\shaders\GL_scene_IBL.vert" />
+    <None Include="jcqt3DTest.pri" />
+    <None Include="jcqt3DTest.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="assets.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

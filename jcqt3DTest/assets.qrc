@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/shaders">
+        <file alias="GL_FrustumCulling.comp">assets/shaders/GL_FrustumCulling.comp</file>
+        <file alias="GL_grid.frag">assets/shaders/GL_grid.frag</file>
+        <file alias="GL_grid.vert">assets/shaders/GL_grid.vert</file>
+        <file alias="GL_scene_IBL.frag">assets/shaders/GL_scene_IBL.frag</file>
+        <file alias="GL_scene_IBL.vert">assets/shaders/GL_scene_IBL.vert</file>
+    </qresource>
+    <qresource prefix="/textures">
+        <file alias="brdfLUT.ktx">assets/textures/brdfLUT.ktx</file>
+        <file alias="immenstadter_horn_2k.hdr">assets/textures/immenstadter_horn_2k.hdr</file>
+        <file alias="immenstadter_horn_2k_irradiance.hdr">assets/textures/immenstadter_horn_2k_irradiance.hdr</file>
+    </qresource>
+    <qresource prefix="/meshes">
+        <file alias="bistro_all.materials">assets/meshes/bistro_all.materials</file>
+        <file alias="bistro_all.meshes">assets/meshes/bistro_all.meshes</file>
+        <file alias="bistro_all.scene">assets/meshes/bistro_all.scene</file>
+    </qresource>
+</RCC>

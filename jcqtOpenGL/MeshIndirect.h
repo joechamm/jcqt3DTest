@@ -75,7 +75,7 @@ namespace jcqt
 
 		void updateMaterialsBuffer( const SceneDataType& data );
 
-	private:
+	public:
 		quint32 m_vao = 0;
 		quint32 m_numIndices = 0;
 		quint32 m_indexBuffer = 0;
