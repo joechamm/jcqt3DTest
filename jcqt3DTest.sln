@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jcqt3DTest", "jcqt3DTest\jcqt3DTest.vcxproj", "{2FAE2C26-0EDF-4BE9-8EAF-122F4A548B0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{385C7436-A2AB-4D0D-9030-CF422D15C464} = {385C7436-A2AB-4D0D-9030-CF422D15C464}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jcqtOpenGL", "jcqtOpenGL\jcqtOpenGL.vcxproj", "{385C7436-A2AB-4D0D-9030-CF422D15C464}"
 EndProject

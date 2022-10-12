@@ -36,14 +36,14 @@ SOFTWARE.
 
 namespace jcqt
 {
-	struct JCQTOPENGL_EXPORT DrawElementsIndirectCommand
+	/*struct JCQTOPENGL_EXPORT DrawElementsIndirectCommand
 	{
 		quint32 m_count;
 		quint32 m_instanceCount;
 		quint32 m_firstInstance;
 		quint32 m_baseVertex;
 		quint32 m_baseInstance;
-	};
+	};*/
 
 	class JCQTOPENGL_EXPORT DrawMesh final
 	{
@@ -62,6 +62,14 @@ namespace jcqt
 		DrawMesh ( DrawMesh&& ) = default;
 
 		void draw ( const SceneData& data ) const;		
+
+		quint32 vao () const { return m_vao;  }
+		quint32 indexBuffer () const { return m_indexBuffer;  }
+		quint32 vertexBuffer () const { return m_vertexBuffer; }
+		quint32 materialsBuffer () const { return m_materialsBuffer; }
+		quint32 modelMatricesBuffer () const { return m_modelMatricesBuffer; }
+		quint32 indirectBuffer () const { return m_indirectBuffer; }
+		quint32 numIndices () const { return m_numIndices; }
 	};
 }
 

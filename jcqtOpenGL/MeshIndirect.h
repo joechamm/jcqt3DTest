@@ -75,6 +75,17 @@ namespace jcqt
 
 		void updateMaterialsBuffer( const SceneDataType& data );
 
+		quint32 vao () const { return m_vao; }
+		quint32 numIndices () const { return m_numIndices; }
+		quint32 indexBuffer () const { return m_indexBuffer; }
+		quint32 vertexBuffer () const { return m_vertexBuffer; }
+		quint32 materialsBuffer () const { return m_materialsBuffer; }
+		quint32 modelMatricesBuffer () const { return m_modelMatricesBuffer; }
+		quint32 indirectHandle () const { return m_indirectBuffer.handle (); }
+		void indirectUpload () { m_indirectBuffer.uploadIndirectBuffer (); }
+		void indirectSelectTo ( IndirectBuffer& buff, const std::function<bool ( const DrawElementsIndirectCommand& )>& predicate ) { m_indirectBuffer.selectTo ( buff, predicate ); }
+		DrawElementsIndirectCommand* indirectDrawCommands () { return m_indexBuffer.m_drawCommands.data (); }
+
 	public:
 		quint32 m_vao = 0;
 		quint32 m_numIndices = 0;

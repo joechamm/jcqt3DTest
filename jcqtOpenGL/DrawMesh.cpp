@@ -38,6 +38,16 @@ namespace jcqt
 		funcs->glNamedBufferStorage ( m_vertexBuffer, data.header_.vertexDataSize, data.meshData_.vertexData_.constData (), 0 );
 		funcs->glNamedBufferStorage ( m_materialsBuffer, sizeof ( MaterialDescription ) * data.materials_.size (), data.materials_.constData (), 0 );
 		funcs->glNamedBufferStorage ( m_modelMatricesBuffer, sizeof ( mat4 ) * data.shapes_.size (), nullptr, GL_DYNAMIC_STORAGE_BIT );
+
+		struct DrawElementsIndirectCommand
+		{
+			GLuint m_count;
+			GLuint m_instanceCount;
+			GLuint m_firstIndex;
+			GLuint m_baseVertex;
+			GLuint m_baseInstance;
+		};
+
 		funcs->glNamedBufferStorage ( m_indirectBuffer, sizeof ( DrawElementsIndirectCommand ) * data.shapes_.size () + sizeof ( GLsizei ), nullptr, GL_DYNAMIC_STORAGE_BIT );
 
 		funcs->glCreateVertexArrays ( 1, &m_vao );
@@ -78,7 +88,7 @@ namespace jcqt
 			*cmd++ = {
 				.m_count = data.meshData_.meshes_ [ meshIdx ].getLODIndicesCount ( lod ),
 				.m_instanceCount = 1,
-				.m_firstInstance = data.shapes_ [ i ].indexOffset,
+				.m_firstIndex = data.shapes_ [ i ].indexOffset,
 				.m_baseVertex = data.shapes_ [ i ].vertexOffset,
 				.m_baseInstance = data.shapes_ [ i ].materialIndex
 			};

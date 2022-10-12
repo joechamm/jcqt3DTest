@@ -7,4 +7,5 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 HEADERS += ./ShadowMapWindow.h
-SOURCES += ./ShadowMapWindow.cpp
+SOURCES += ./ShadowMapWindow.cpp \
+			./main.cpp 

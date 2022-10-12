@@ -142,7 +142,7 @@ void ShadowMapWindow::initBuffers ()
 void ShadowMapWindow::loadScene ()
 {
 	m_sceneData.create ( ":/meshes/bistro_all.meshes", ":/scenes/bistro_all.scene", ":/materials/bistro_all.materials" );
-	m_indirectMesh.create ( m_sceneData );
+	m_indirectMesh.create ( *(m_sceneData.get()) );
 //	m_mesh.create ( *( m_sceneData.get () ));
 
 	m_skyboxRenderer.create ();
@@ -163,6 +163,7 @@ void ShadowMapWindow::initDebugLogger ()
 	m_debugLogger->initialize ();
 	connect ( m_debugLogger.data (), &QOpenGLDebugLogger::messageLogged, this, &ShadowMapWindow::handleLoggedMessage );
 	m_debugLogger->startLogging ();
+	m_debugLogger->enableMessages ();
 }
 
 void ShadowMapWindow::initTimeMonitor ()
@@ -229,6 +230,8 @@ void ShadowMapWindow::teardownDebugLogger ()
 void ShadowMapWindow::handleLoggedMessage(const QOpenGLDebugMessage& msg) 
 {
 	// TODO: implement
+
+	qDebug () << msg << Qt::endl;
 }
 
 void ShadowMapWindow::initializeGL ()
@@ -264,7 +267,8 @@ void ShadowMapWindow::initializeGL ()
 
 void ShadowMapWindow::resizeGL(int w, int h) 
 {
-
+	const float aspectRatio = w / ( float ) h;
+	m_perFrameData.proj = glm::perspective ( 45.0f, aspectRatio, 0.1f, 1000.f );
 }
 
 void ShadowMapWindow::paintGL ()
@@ -406,6 +410,7 @@ void ShadowMapWindow::keyReleaseEvent ( QKeyEvent* e )
 	switch ( e->key () )
 	{
 	case Qt::Key_Escape:
+		close ();
 		break;
 	case Qt::Key_W:
 		m_positioner.movement_.forward_ = false;
@@ -450,7 +455,7 @@ void ShadowMapWindow::mouseMoveEvent ( QMouseEvent* e )
 		m_mouseState.pos.y = static_cast< float >( p.y () / ( float ) sz.height () );
 	}
 
-	e->accept ();
+	update ();
 }
 
 void ShadowMapWindow::mousePressEvent ( QMouseEvent* e )
@@ -491,41 +496,41 @@ bool ShadowMapWindow::event ( QEvent* e )
 	switch ( e->type() )
 	{
 	case QEvent::KeyPress:
-		QKeyEvent* ke = static_cast< QKeyEvent* >( e );
-		keyPressEvent ( ke );
+	//	QKeyEvent* ke = static_cast< QKeyEvent* >( e );
+		keyPressEvent ( static_cast< QKeyEvent* >( e ) );
 		break;
 	case QEvent::KeyRelease:
-		QKeyEvent* ke = static_cast< QKeyEvent* >( e );
-		keyReleaseEvent ( ke );
+//		QKeyEvent* ke = static_cast< QKeyEvent* >( e );
+		keyReleaseEvent ( static_cast< QKeyEvent* >( e ) );
 		break;
 	case QEvent::MouseButtonPress:
-		QMouseEvent* me = static_cast< QMouseEvent* >( e );
-		mousePressEvent ( me );
+//		QMouseEvent* me = static_cast< QMouseEvent* >( e );
+		mousePressEvent ( static_cast< QMouseEvent* >( e ) );
 		break;
 	case QEvent::MouseButtonRelease:
-		QMouseEvent* me = static_cast< QMouseEvent* >( e );
-		mouseReleaseEvent ( me );
+//		QMouseEvent* me = static_cast< QMouseEvent* >( e );
+		mouseReleaseEvent ( static_cast< QMouseEvent* >( e ) );
 		break;
 	case QEvent::MouseMove:
-		QMouseEvent* me = static_cast< QMouseEvent* >( e );
-		mouseMoveEvent ( me );
+//		QMouseEvent* me = static_cast< QMouseEvent* >( e );
+		mouseMoveEvent ( static_cast< QMouseEvent* >( e ) );
 		break;
 	case QEvent::Wheel:
-		QWheelEvent* we = static_cast< QWheelEvent* >( e );
-		wheelEvent ( we );
+//		QWheelEvent* we = static_cast< QWheelEvent* >( e );
+		wheelEvent ( static_cast< QWheelEvent* >( e ) );
 		break;
 	case QEvent::MouseButtonDblClick:
-		QMouseEvent* me = static_cast< QMouseEvent* >( e );
-		mouseDoubleClickEvent ( me );
+//		QMouseEvent* me = static_cast< QMouseEvent* >( e );
+		mouseDoubleClickEvent ( static_cast< QMouseEvent* >( e ) );
 		break;
 	case QEvent::Expose:
-		
+		exposeEvent ( static_cast< QExposeEvent* >( e ) );
 		break;
 	default:
 		break;
 	}
 
-	e->accept ();
+	return true;
 }
 
 void ShadowMapWindow::exposeEvent ( QExposeEvent* e )
