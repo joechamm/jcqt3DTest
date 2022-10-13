@@ -35,11 +35,11 @@ SOFTWARE.
 #include <QByteArrayList>
 #include <glm/glm.hpp>
 
-using glm::mat4;
-using glm::vec4;
-
 namespace jcqt
 {
+	using glm::mat4;
+	using glm::vec4;
+
 	enum eMaterialFlags
 	{
 		eMaterialFlags_CastShadow = 0x1,
@@ -93,7 +93,7 @@ namespace jcqt
 	 * @param materials array of material data to be saved
 	 * @param files names of the texture files associated the material data
 	*/
-	void saveMaterials ( const char* filename, const QList<MaterialDescription>& materials, const QByteArrayList& files );
+	void JCQTOPENGL_EXPORT saveMaterials ( const char* filename, const QList<MaterialDescription>& materials, const QByteArrayList& files );
 
 	/**
 	 * @brief Load material data from a file.
@@ -101,7 +101,7 @@ namespace jcqt
 	 * @param materials array of material data to load the file contents into.
 	 * @param files array to load the texture filenames into.
 	*/
-	void loadMaterials ( const char* filename, QList<MaterialDescription>& materials, QByteArrayList& files );
+	void JCQTOPENGL_EXPORT loadMaterials ( const char* filename, QList<MaterialDescription>& materials, QByteArrayList& files );
 
 	/**
 	 * @brief Merge material lists from multiple scenes following the logic of merging in mergeScenes
@@ -110,7 +110,7 @@ namespace jcqt
 	 * @param allMaterials output vector of all the material lists from all the input scenes
 	 * @param newTextures out vector of all the texture filenames from all the input scenes
 	*/
-	void mergeMaterialLists (
+	void JCQTOPENGL_EXPORT mergeMaterialLists (
 		const QList<QList<MaterialDescription>* >& oldMaterials,
 		const QList<QByteArrayList* >& oldTextures,
 		QList<MaterialDescription>& allMaterials,

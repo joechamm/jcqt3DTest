@@ -38,10 +38,10 @@ SOFTWARE.
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-using glm::mat4;
-
 namespace jcqt
 {
+	using glm::mat4;
+
 	constexpr const qint32 MAX_NODE_LEVEL = 16;
 
 	struct JCQTOPENGL_EXPORT Hierarchy

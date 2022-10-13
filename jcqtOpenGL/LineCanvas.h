@@ -38,13 +38,13 @@ SOFTWARE.
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-using glm::mat4;
-using glm::vec4;
-using glm::vec3;
-using glm::vec2;
-
 namespace jcqt
 {
+	using glm::mat4;
+	using glm::vec4;
+	using glm::vec3;
+	using glm::vec2;
+
 	struct VertexData
 	{
 		vec3 pos;
@@ -92,7 +92,7 @@ namespace jcqt
 		void flush ();
 	};
 
-	inline void renderCameraFrustum ( LineCanvas& canvas, const mat4& camView, const mat4& camProj, const vec4& color, qint32 numSegments = 1 )
+	inline void JCQTOPENGL_EXPORT renderCameraFrustum ( LineCanvas& canvas, const mat4& camView, const mat4& camProj, const vec4& color, qint32 numSegments = 1 )
 	{
 		const vec4 corners [] = {
 			vec4 ( -1.f, -1.f, -1.f, 1.f ), vec4 ( 1.f, -1.f, -1.f, 1.f ),
@@ -171,7 +171,7 @@ namespace jcqt
 		}
 	}
 
-	inline void drawBox ( LineCanvas& canvas, const mat4& m, const BoundingBox& box, const vec4& color )
+	inline void JCQTOPENGL_EXPORT drawBox ( LineCanvas& canvas, const mat4& m, const BoundingBox& box, const vec4& color )
 	{
 		QVarLengthArray<vec3, 8> pp = {
 			vec3 ( box.max_.x, box.max_.y, box.max_.z ),

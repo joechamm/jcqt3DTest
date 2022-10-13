@@ -34,10 +34,10 @@ SOFTWARE.
 #include <QList>
 #include <glm/glm.hpp>
 
-using glm::vec4;
-
 namespace jcqt
 {
+	using glm::vec4;
+
 	enum class eBitmapType : quint8
 	{
 		eBitmapType_2D = 1,

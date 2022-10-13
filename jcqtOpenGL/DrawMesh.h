@@ -36,15 +36,6 @@ SOFTWARE.
 
 namespace jcqt
 {
-	/*struct JCQTOPENGL_EXPORT DrawElementsIndirectCommand
-	{
-		quint32 m_count;
-		quint32 m_instanceCount;
-		quint32 m_firstInstance;
-		quint32 m_baseVertex;
-		quint32 m_baseInstance;
-	};*/
-
 	class JCQTOPENGL_EXPORT DrawMesh final
 	{
 		quint32 m_vao = 0;
