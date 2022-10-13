@@ -360,4 +360,11 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-FodyWeavers.xsd
+FodyWeavers.xsdx64/
+extern/
+jcqt3DTest/x64/
+jcqt3DTest/assets/meshes/*
+jcqt3DTest/assets/textures/*
+glTFLoader/x64/
+jcqtOpenGL/x64
+jcqtOpenGL/assets/textures/*
