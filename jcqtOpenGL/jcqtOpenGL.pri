@@ -23,7 +23,10 @@ HEADERS += ./jcqtopengl_global.h \
     ./UtilsCubemap.h \
     ./UtilsMath.h \
     ./VtxData.h
-SOURCES += ./Material.cpp \
+
+SOURCES += ./Bitmap.cpp \ 
+    ./Camera.cpp \
+    ./Material.cpp \
     ./LineCanvas.cpp \
     ./jcqtopengl_extension_functions.cpp
     ./DrawMesh.cpp \
@@ -33,4 +36,5 @@ SOURCES += ./Material.cpp \
     ./SceneDataLazy.cpp \
     ./SkyboxRenderer.cpp \ 
     ./UtilsCubemap.cpp \
+    ./UtilsMath.cpp \
     ./VtxData.cpp

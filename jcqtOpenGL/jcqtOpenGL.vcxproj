@@ -99,6 +99,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="LineCanvas.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="DrawMesh.cpp" />
@@ -109,6 +111,7 @@
     <ClCompile Include="SceneDataLazy.cpp" />
     <ClCompile Include="SkyboxRenderer.cpp" />
     <ClCompile Include="UtilsCubemap.cpp" />
+    <ClCompile Include="UtilsMath.cpp" />
     <ClCompile Include="VtxData.cpp" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Camera.h" />
@@ -136,7 +139,7 @@
     <None Include="jcqtOpenGL.pro" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="assets.qrc" />
+    <QtRcc Include="resources\resources.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

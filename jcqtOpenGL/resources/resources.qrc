@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/textures">
+        <file alias="brdfLUT.ktx">textures/brdfLUT.ktx</file>
+        <file alias="const1.bmp">textures/const1.bmp</file>
+        <file alias="immenstadter_horn_2k.hdr">textures/immenstadter_horn_2k.hdr</file>
+        <file alias="immenstadter_horn_2k_irradiance.hdr">textures/immenstadter_horn_2k_irradiance.hdr</file>
+    </qresource>
+    <qresource prefix="/shaders">
+        <file alias="GL_cube.frag">shaders/GL_cube.frag</file>
+        <file alias="GL_cube.vert">shaders/GL_cube.vert</file>
+        <file alias="GL_lines.frag">shaders/GL_lines.frag</file>
+        <file alias="GL_lines.vert">shaders/GL_lines.vert</file>
+    </qresource>
+</RCC>

@@ -64,25 +64,9 @@ namespace jcqt
 
 	public:
 		Bitmap () = default;
-
-		Bitmap ( qint32 w, qint32 h, qint32 comp, eBitmapFormat fmt )
-			: w_ ( w ), h_ ( h ), comp_ ( comp ), fmt_ ( fmt ), data_ ( static_cast< qsizetype >( w* h* comp* getBytesPerComponent ( fmt ) ) )
-		{
-			initGetSetFunctions ();
-		}
-		
-		Bitmap ( qint32 w, qint32 h, qint32 d, qint32 comp, eBitmapFormat fmt )
-			: w_ ( w ), h_ ( h ), d_ ( d ), comp_ ( comp ), fmt_ ( fmt ), data_ ( static_cast< qsizetype >( w* h* d* comp* getBytesPerComponent ( fmt ) ) )
-		{
-			initGetSetFunctions ();
-		}
-		
-		Bitmap ( qint32 w, qint32 h, qint32 comp, eBitmapFormat fmt, const void* ptr )
-			: w_ ( w ), h_ ( h ), comp_ ( comp ), fmt_ ( fmt ), data_ ( static_cast< qsizetype >( w* h* comp* getBytesPerComponent ( fmt ) ) )
-		{
-			initGetSetFunctions ();
-			memcpy ( data_.data (), ptr, data_.size () );
-		}
+		Bitmap ( qint32 w, qint32 h, qint32 comp, eBitmapFormat fmt );		
+		Bitmap ( qint32 w, qint32 h, qint32 d, qint32 comp, eBitmapFormat fmt );		
+		Bitmap ( qint32 w, qint32 h, qint32 comp, eBitmapFormat fmt, const void* ptr );		
 
 		static qint32 getBytesPerComponent ( eBitmapFormat fmt )
 		{
@@ -91,15 +75,8 @@ namespace jcqt
 			return 0;
 		}
 
-		void setPixel ( qint32 x, qint32 y, const vec4& c )
-		{
-			( *this.*setPixelFunc )( x, y, c );
-		}
-
-		vec4 getPixel ( qint32 x, qint32 y ) const
-		{
-			return ( ( *this.*getPixelFunc )( x, y ) );
-		}
+		void setPixel ( qint32 x, qint32 y, const vec4& c );
+		vec4 getPixel ( qint32 x, qint32 y ) const;
 
 	private:
 		// function pointer aliases
@@ -109,63 +86,11 @@ namespace jcqt
 		getPixel_t getPixelFunc = &Bitmap::getPixelUnsignedByte;
 
 
-		void initGetSetFunctions ()
-		{
-			switch ( fmt_ )
-			{
-			case jcqt::eBitmapFormat::eBitmapFormat_UNSIGNED_BYTE:
-				setPixelFunc = &Bitmap::setPixelUnsignedByte;
-				getPixelFunc = &Bitmap::getPixelUnsignedByte;
-				break;
-			case jcqt::eBitmapFormat::eBitmapFormat_FLOAT:
-				setPixelFunc = &Bitmap::setPixelFloat;
-				getPixelFunc = &Bitmap::getPixelFloat;
-				break;
-			default:
-				break;
-			}
-		}
-
-		void setPixelFloat ( qint32 x, qint32 y, const vec4& c )
-		{
-			const qint32 ofs = comp_ * ( y * w_ + x );
-			float* data = reinterpret_cast< float* >( data_.data () );
-			if ( comp_ > 0 ) data [ ofs + 0 ] = c.x;
-			if ( comp_ > 1 ) data [ ofs + 1 ] = c.y;
-			if ( comp_ > 2 ) data [ ofs + 2 ] = c.z;
-			if ( comp_ > 3 ) data [ ofs + 3 ] = c.w;
-		}
-
-		vec4 getPixelFloat ( qint32 x, qint32 y ) const
-		{
-			const qint32 ofs = comp_ * ( y * w_ + x );
-			const float* data = reinterpret_cast< const float* >( data_.constData () );
-			return vec4 ( comp_ > 0 ? data [ ofs + 0 ] : 0.0f,
-				comp_ > 1 ? data [ ofs + 1 ] : 0.0f,
-				comp_ > 2 ? data[ofs + 2] : 0.0f,
-				comp_ > 3 ? data[ofs + 3] : 0.0f
-			);
-		}
-
-		void setPixelUnsignedByte ( qint32 x, qint32 y, const vec4& c )
-		{
-			const qint32 ofs = comp_ * ( y * w_ + x );
-			if ( comp_ > 0 ) data_ [ ofs + 0 ] = static_cast< quint8 > ( c.x * 255.0f );
-			if ( comp_ > 1 ) data_ [ ofs + 1 ] = static_cast< quint8 >( c.y * 255.0f );
-			if ( comp_ > 2 ) data_ [ ofs + 2 ] = static_cast< quint8 > ( c.z * 255.0f );
-			if ( comp_ > 3 ) data_ [ ofs + 3 ] = static_cast< quint8 > ( c.w * 255.0f );
-		}
-
-		vec4 getPixelUnsignedByte ( qint32 x, qint32 y ) const
-		{
-			const int ofs = comp_ * ( y * w_ + x );
-			return vec4 (
-				comp_ > 0 ? static_cast< float >( data_ [ ofs + 0 ] ) / 255.0f : 0.0f,
-				comp_ > 1 ? static_cast< float >( data_ [ ofs + 1 ] ) / 255.0f : 0.0f,
-				comp_ > 2 ? static_cast< float >( data_ [ ofs + 2 ] ) / 255.0f : 0.0f,
-				comp_ > 3 ? static_cast< float >( data_ [ ofs + 3 ] ) / 255.0f : 0.0f
-			);
-		}
+		void initGetSetFunctions ();
+		void setPixelFloat ( qint32 x, qint32 y, const vec4& c );
+		vec4 getPixelFloat ( qint32 x, qint32 y ) const;		
+		void setPixelUnsignedByte ( qint32 x, qint32 y, const vec4& c );	
+		vec4 getPixelUnsignedByte ( qint32 x, qint32 y ) const;		
 	};
 }
 
