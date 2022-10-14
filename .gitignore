@@ -368,3 +368,6 @@ jcqt3DTest/assets/textures/*
 glTFLoader/x64/
 jcqtOpenGL/x64
 jcqtOpenGL/assets/textures/*
+jcqt3DTest/resources/meshes/*
+jcqt3DTest/resources/textures/*
+jcqtOpenGL/resources/textures/*

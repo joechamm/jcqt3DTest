@@ -4,14 +4,37 @@
 
 TEMPLATE = app
 TARGET = jcqt3DTest
-DESTDIR = ../x64/Debug
-QT += gui opengl
-CONFIG += debug
-LIBS += -L"../x64/Debug/jcqtOpenGL.lib"
-DEPENDPATH += .
-MOC_DIR += .
-OBJECTS_DIR += debug
-UI_DIR += .
-RCC_DIR += .
-RESOURCES += ./assets.qrc
+
+CONFIG += c++latest
+CONFIG += debug_and_release
+QT += gui opengl concurrent
+
+RCC_DIR += ./resources 
+RESOURCES += ./resources/resources.qrc 
+
+MOC_DIR += ./moc 
+UI_DIR += ./ui 
+
+CONFIG(debug, debug|release) {
+	DESTDIR = ../x64/Debug 
+	LIBS += ../x64/Debug/jcqtOpenGL.lib
+} else {
+	DESTDIR = ../x64/Release
+	LIBS += ../x64/Release/jcqtOpenGL.lib
+}
+
+INCLUDEPATH += ../jcqtOpenGL 
+DEPENDPATH += ../jcqtOpenGL 
+
+#DESTDIR = ../x64/Debug
+#QT += gui opengl
+#CONFIG += debug
+#LIBS += -L"../x64/Debug/jcqtOpenGL.lib"
+#DEPENDPATH += .
+#MOC_DIR += .
+#OBJECTS_DIR += debug
+#UI_DIR += .
+#RCC_DIR += .
+#RESOURCES += ./assets.qrc
+
 include(jcqt3DTest.pri)

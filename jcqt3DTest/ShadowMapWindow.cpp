@@ -142,8 +142,8 @@ void ShadowMapWindow::initBuffers ()
 void ShadowMapWindow::loadScene ()
 {
 	m_sceneData.create ( ":/meshes/bistro_all.meshes", ":/scenes/bistro_all.scene", ":/materials/bistro_all.materials" );
-	m_indirectMesh.create ( *(m_sceneData.get()) );
-//	m_mesh.create ( *( m_sceneData.get () ));
+//	m_indirectMesh.create ( *(m_sceneData.get()) );
+	m_mesh.create ( *( m_sceneData.get () ));
 
 	m_skyboxRenderer.create ();
 	m_lineCanvas.create ();
@@ -201,8 +201,8 @@ void ShadowMapWindow::teardownScene ()
 {
 	m_skyboxRenderer.clear ();
 	m_lineCanvas.clear ();
-//	m_mesh.clear ();
-	m_indirectMesh.clear ();
+	m_mesh.clear ();
+//	m_indirectMesh.clear ();
 	m_sceneData.clear ();
 }
 
@@ -321,7 +321,8 @@ void ShadowMapWindow::paintGL ()
 	m_cullProgram->bind ();
 	f->glMemoryBarrier ( GL_BUFFER_UPDATE_BARRIER_BIT );
 	f->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kBufferIndex_BoundingBoxes, m_boundingBoxesBuffer );
-	f->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kBufferIndex_DrawCommands, m_indirectMesh->m_indirectBuffer.handle () );
+//	f->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kBufferIndex_DrawCommands, m_indirectMesh->m_indirectBuffer.handle () );
+	f->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kBufferIndex_DrawCommands, m_mesh->indirectBuffer () );
 	f->glBindBufferBase ( GL_SHADER_STORAGE_BUFFER, kBufferIndex_NumVisibleMeshes, m_numVisibleMeshesBuffer );
 	f->glDispatchCompute ( 1 + ( GLuint ) m_sceneData->shapes_.size () / 64, 1, 1 );
 	f->glMemoryBarrier ( GL_COMMAND_BARRIER_BIT | GL_SHADER_STORAGE_BARRIER_BIT | GL_CLIENT_MAPPED_BUFFER_BARRIER_BIT );
@@ -336,7 +337,8 @@ void ShadowMapWindow::paintGL ()
 	if ( m_drawMeshes )
 	{
 		m_sceneProgram->bind ();
-		m_indirectMesh->draw ( m_sceneData->shapes_.size () );
+	//	m_indirectMesh->draw ( m_sceneData->shapes_.size () );
+		m_mesh->draw ( *(m_sceneData.get()) );
 	}
 
 	// 1.2 Grid

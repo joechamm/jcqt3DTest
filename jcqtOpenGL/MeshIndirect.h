@@ -32,6 +32,9 @@ SOFTWARE.
 #include <QList>
 #include "jcqtopengl_global.h"
 
+#include "SceneData.h"
+#include "SceneDataLazy.h"
+
 namespace jcqt
 {
 	struct JCQTOPENGL_EXPORT DrawElementsIndirectCommand
@@ -95,7 +98,9 @@ namespace jcqt
 		quint32 m_modelMatricesBuffer = 0;
 		IndirectBuffer m_indirectBuffer;			
 	};
-	
+
+	using MeshIndirectSceneLazy = MeshIndirect<SceneDataLazy>;
+	using MeshIndirectScene = MeshIndirect<SceneData>;	
 }
 
 #endif // !__MESH_H__

@@ -29,6 +29,8 @@ SOFTWARE.
 #ifndef __SHADOW_MAP_WINDOW_H__
 #define __SHADOW_MAP_WINDOW_H__
 
+#include "../jcqtOpenGL/jcqtopengl_global.h"
+
 #include <QOpenGLWindow>
 #include <QOpenGLFunctions_4_5_Core>
 #include <QOpenGLShaderProgram>
@@ -50,14 +52,14 @@ SOFTWARE.
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtx/euler_angles.hpp>
 
+using namespace jcqt;
+
 using glm::mat4;
 using glm::mat3;
 using glm::mat2;
 using glm::vec4;
 using glm::vec3;
 using glm::vec2;
-
-using namespace jcqt;
 
 class ShadowMapWindow : public QOpenGLWindow
 {
@@ -147,8 +149,8 @@ private:
 	QSharedPointer<QOpenGLShaderProgram>	m_cullProgram;
 
 	QSharedPointer<SceneData>				m_sceneData;
-//	QSharedPointer<DrawMesh>				m_mesh;
-	QSharedPointer<MeshIndirect<SceneData>> m_indirectMesh;
+	QSharedPointer<DrawMesh>				m_mesh;
+//	QSharedPointer<MeshIndirect<SceneData>> m_indirectMesh;
 
 	QSharedPointer<SkyboxRenderer>			m_skyboxRenderer;
 	QSharedPointer<LineCanvas>				m_lineCanvas;

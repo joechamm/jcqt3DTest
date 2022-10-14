@@ -5,7 +5,7 @@
 QT -= gui
 QT += opengl concurrent
 
-TEMPLATE = lib
+TEMPLATE = vclib
 TARGET = jcqtOpenGL
 
 CONFIG += c++latest
