@@ -29,18 +29,18 @@ ShadowMapWindow::ShadowMapWindow ( QOpenGLContext* shareContext, QOpenGLWindow::
 	m_positioner.lookAt ( vec3 ( -10.0f, 3.0f, 3.0f ), vec3 ( 0.0f, 0.0f, -1.0f ), vec3 ( 0.0f, 1.0f, 0.0f ) );
 	m_cullingView = m_camera.getViewMatrix ();
 	
-	QSize sz = size ();
-	const float aspectRatio = sz.width () / ( float ) sz.height ();
-	const float fovDegs = 45.0f;
-	const float zNear = 0.1f;
-	const float zFar = 1000.0f;
-	
-	m_perFrameData.view = m_camera.getViewMatrix ();
-	m_perFrameData.proj = glm::perspective ( glm::radians ( fovDegs ), aspectRatio, zNear, zFar );
-	m_perFrameData.light = mat4 ( 1.0f );
-	m_perFrameData.cameraPos = vec4(m_camera.getPosition (), 1.0f);
-	m_perFrameData.light = mat4 ( 0.0f ); // unused for right now
-	m_perFrameData.numShapesToCull = 0;
+	//QSize sz = size ();
+	//const float aspectRatio = sz.width () / ( float ) sz.height ();
+	//const float fovDegs = 45.0f;
+	//const float zNear = 0.1f;
+	//const float zFar = 1000.0f;
+	//
+	//m_perFrameData.view = m_camera.getViewMatrix ();
+	//m_perFrameData.proj = glm::perspective ( glm::radians ( fovDegs ), aspectRatio, zNear, zFar );
+	//m_perFrameData.light = mat4 ( 1.0f );
+	//m_perFrameData.cameraPos = vec4(m_camera.getPosition (), 1.0f);
+	//m_perFrameData.light = mat4 ( 0.0f ); // unused for right now
+	//m_perFrameData.numShapesToCull = 0;
 
 	jcqt::getFrustumPlanes ( m_perFrameData.proj * m_cullingView, m_perFrameData.frustumPlanes );
 	jcqt::getFrustumCorners ( m_perFrameData.proj * m_cullingView, m_perFrameData.frustumCorners );
@@ -62,18 +62,18 @@ ShadowMapWindow::ShadowMapWindow(QOpenGLWindow::UpdateBehavior updateBehavior, Q
 	m_positioner.lookAt ( vec3 ( -10.0f, 3.0f, 3.0f ), vec3 ( 0.0f, 0.0f, -1.0f ), vec3 ( 0.0f, 1.0f, 0.0f ) );
 	m_cullingView = m_camera.getViewMatrix ();
 
-	QSize sz = size ();
-	const float aspectRatio = sz.width () / ( float ) sz.height ();
-	const float fovDegs = 45.0f;
-	const float zNear = 0.1f;
-	const float zFar = 1000.0f;
+	//QSize sz = size ();
+	//const float aspectRatio = sz.width () / ( float ) sz.height ();
+	//const float fovDegs = 45.0f;
+	//const float zNear = 0.1f;
+	//const float zFar = 1000.0f;
 
-	m_perFrameData.view = m_camera.getViewMatrix ();
-	m_perFrameData.proj = glm::perspective ( glm::radians ( fovDegs ), aspectRatio, zNear, zFar );
-	m_perFrameData.light = mat4 ( 1.0f );
-	m_perFrameData.cameraPos = vec4 ( m_camera.getPosition (), 1.0f );
-	m_perFrameData.light = mat4 ( 0.0f ); // unused for right now
-	m_perFrameData.numShapesToCull = 0;
+	//m_perFrameData.view = m_camera.getViewMatrix ();
+	//m_perFrameData.proj = glm::perspective ( glm::radians ( fovDegs ), aspectRatio, zNear, zFar );
+	//m_perFrameData.light = mat4 ( 1.0f );
+	//m_perFrameData.cameraPos = vec4 ( m_camera.getPosition (), 1.0f );
+	//m_perFrameData.light = mat4 ( 0.0f ); // unused for right now
+	//m_perFrameData.numShapesToCull = 0;
 
 	jcqt::getFrustumPlanes ( m_perFrameData.proj * m_cullingView, m_perFrameData.frustumPlanes );
 	jcqt::getFrustumCorners ( m_perFrameData.proj * m_cullingView, m_perFrameData.frustumCorners );
